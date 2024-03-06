@@ -1,0 +1,5 @@
+**/**/http-client.private.env.json
+**/**/.openapi-generator
+**/**/.openapi-generator-ignore
+.idea
+/jetbrains-client-api-repository.iml

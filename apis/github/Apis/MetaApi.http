@@ -1,0 +1,31 @@
+## MetaApi
+
+### Get GitHub meta information
+## Get GitHub meta information
+GET https://api.github.com/meta
+Accept: application/json
+Authorization: Bearer={{bearerToken}}
+
+### Get all API versions
+## Get all API versions
+GET https://api.github.com/versions
+Accept: application/json
+Authorization: Bearer={{bearerToken}}
+
+### Get Octocat
+## Get Octocat
+GET https://api.github.com/octocat
+Accept: application/octocat-stream
+Authorization: Bearer={{bearerToken}}
+
+### Get the Zen of GitHub
+## Get the Zen of GitHub
+GET https://api.github.com/zen
+Accept: application/json
+Authorization: Bearer={{bearerToken}}
+
+### GitHub API Root
+## GitHub API Root
+GET https://api.github.com/
+Accept: application/json
+Authorization: Bearer={{bearerToken}}

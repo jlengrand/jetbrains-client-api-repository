@@ -1,0 +1,7 @@
+#!/bin/sh
+
+docker run --rm \
+  -v ${PWD}:/local openapi-generator-jetbrains generate \
+  -i /local/apis/github/api.github.com.json \
+  -g jetbrains-http-client \
+  -o /local/apis/github/out
