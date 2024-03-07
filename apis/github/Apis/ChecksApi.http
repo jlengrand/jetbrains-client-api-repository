@@ -5,7 +5,7 @@
 POST https://api.github.com/repos/{{owner}}/{{repo}}/check-runs
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "mighty_readme",
@@ -26,7 +26,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/check-suites
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "head_sha" : "d6fde92930d4715a2b49857d24b940956b26d2d3"
@@ -37,56 +37,56 @@ Authorization: Bearer={{bearerToken}}
 ## Get a check run
 GET https://api.github.com/repos/{{owner}}/{{repo}}/check-runs/{{check_run_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a check suite
 ## Get a check suite
 GET https://api.github.com/repos/{{owner}}/{{repo}}/check-suites/{{check_suite_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List check run annotations
 ## List check run annotations
 GET https://api.github.com/repos/{{owner}}/{{repo}}/check-runs/{{check_run_id}}/annotations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List check runs for a Git reference
 ## List check runs for a Git reference
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{ref}}/check-runs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List check runs in a check suite
 ## List check runs in a check suite
 GET https://api.github.com/repos/{{owner}}/{{repo}}/check-suites/{{check_suite_id}}/check-runs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List check suites for a Git reference
 ## List check suites for a Git reference
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{ref}}/check-suites
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Rerequest a check run
 ## Rerequest a check run
 POST https://api.github.com/repos/{{owner}}/{{repo}}/check-runs/{{check_run_id}}/rerequest
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Rerequest a check suite
 ## Rerequest a check suite
 POST https://api.github.com/repos/{{owner}}/{{repo}}/check-suites/{{check_suite_id}}/rerequest
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update repository preferences for check suites
 ## Update repository preferences for check suites
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/check-suites/preferences
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "auto_trigger_checks" : [ {
@@ -101,7 +101,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/check-runs/{{check_run_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "mighty_readme",

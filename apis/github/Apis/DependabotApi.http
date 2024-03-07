@@ -3,14 +3,14 @@
 ### Add selected repository to an organization secret
 ## Add selected repository to an organization secret
 PUT https://api.github.com/orgs/{{org}}/dependabot/secrets/{{secret_name}}/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create or update an organization secret
 ## Create or update an organization secret
 PUT https://api.github.com/orgs/{{org}}/dependabot/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -25,7 +25,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -36,91 +36,91 @@ Authorization: Bearer={{bearerToken}}
 ### Delete an organization secret
 ## Delete an organization secret
 DELETE https://api.github.com/orgs/{{org}}/dependabot/secrets/{{secret_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a repository secret
 ## Delete a repository secret
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/secrets/{{secret_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a Dependabot alert
 ## Get a Dependabot alert
 GET https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/alerts/{{alert_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization public key
 ## Get an organization public key
 GET https://api.github.com/orgs/{{org}}/dependabot/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization secret
 ## Get an organization secret
 GET https://api.github.com/orgs/{{org}}/dependabot/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository public key
 ## Get a repository public key
 GET https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository secret
 ## Get a repository secret
 GET https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List Dependabot alerts for an enterprise
 ## List Dependabot alerts for an enterprise
 GET https://api.github.com/enterprises/{{enterprise}}/dependabot/alerts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List Dependabot alerts for an organization
 ## List Dependabot alerts for an organization
 GET https://api.github.com/orgs/{{org}}/dependabot/alerts
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List Dependabot alerts for a repository
 ## List Dependabot alerts for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/alerts
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization secrets
 ## List organization secrets
 GET https://api.github.com/orgs/{{org}}/dependabot/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository secrets
 ## List repository secrets
 GET https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List selected repositories for an organization secret
 ## List selected repositories for an organization secret
 GET https://api.github.com/orgs/{{org}}/dependabot/secrets/{{secret_name}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove selected repository from an organization secret
 ## Remove selected repository from an organization secret
 DELETE https://api.github.com/orgs/{{org}}/dependabot/secrets/{{secret_name}}/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Set selected repositories for an organization secret
 ## Set selected repositories for an organization secret
 PUT https://api.github.com/orgs/{{org}}/dependabot/secrets/{{secret_name}}/repositories
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_repository_ids" : [ 64780797 ]
@@ -133,7 +133,7 @@ PATCH https://api.github.com/repos/{{owner}}/{{repo}}/dependabot/alerts/{{alert_
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "state" : "dismissed",

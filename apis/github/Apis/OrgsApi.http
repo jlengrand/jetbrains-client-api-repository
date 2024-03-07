@@ -3,52 +3,52 @@
 ### Add a security manager team
 ## Add a security manager team
 PUT https://api.github.com/orgs/{{org}}/security-managers/teams/{{team_slug}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Assign an organization role to a team
 ## Assign an organization role to a team
 PUT https://api.github.com/orgs/{{org}}/organization-roles/teams/{{team_slug}}/{{role_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Assign an organization role to a user
 ## Assign an organization role to a user
 PUT https://api.github.com/orgs/{{org}}/organization-roles/users/{{username}}/{{role_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Block a user from an organization
 ## Block a user from an organization
 PUT https://api.github.com/orgs/{{org}}/blocks/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Cancel an organization invitation
 ## Cancel an organization invitation
 DELETE https://api.github.com/orgs/{{org}}/invitations/{{invitation_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check if a user is blocked by an organization
 ## Check if a user is blocked by an organization
 GET https://api.github.com/orgs/{{org}}/blocks/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check organization membership for a user
 ## Check organization membership for a user
 GET https://api.github.com/orgs/{{org}}/members/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check public organization membership for a user
 ## Check public organization membership for a user
 GET https://api.github.com/orgs/{{org}}/public_members/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Convert an organization member to outside collaborator
 ## Convert an organization member to outside collaborator
 PUT https://api.github.com/orgs/{{org}}/outside_collaborators/{{username}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "async" : true
@@ -60,7 +60,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/organization-roles
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Custom Role Manager",
@@ -74,7 +74,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/invitations
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "email" : "octocat@github.com",
@@ -88,7 +88,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/orgs/{{org}}/properties/schema
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "properties" : [ {
@@ -115,7 +115,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/orgs/{{org}}/properties/values
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "repository_names" : [ "Hello-World", "octo-repo" ],
@@ -137,7 +137,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/orgs/{{org}}/properties/schema/{{custom_property_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "value_type" : "single_select",
@@ -153,7 +153,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/hooks
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "web",
@@ -170,226 +170,226 @@ Authorization: Bearer={{bearerToken}}
 ## Delete an organization
 DELETE https://api.github.com/orgs/{{org}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a custom organization role.
 ## Delete a custom organization role.
 DELETE https://api.github.com/orgs/{{org}}/organization-roles/{{role_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an organization webhook
 ## Delete an organization webhook
 DELETE https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 
 ### Get an organization
 ## Get an organization
 GET https://api.github.com/orgs/{{org}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all custom properties for an organization
 ## Get all custom properties for an organization
 GET https://api.github.com/orgs/{{org}}/properties/schema
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a custom property for an organization
 ## Get a custom property for an organization
 GET https://api.github.com/orgs/{{org}}/properties/schema/{{custom_property_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization membership for the authenticated user
 ## Get an organization membership for the authenticated user
 GET https://api.github.com/user/memberships/orgs/{{org}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get organization membership for a user
 ## Get organization membership for a user
 GET https://api.github.com/orgs/{{org}}/memberships/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization role
 ## Get an organization role
 GET https://api.github.com/orgs/{{org}}/organization-roles/{{role_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization webhook
 ## Get an organization webhook
 GET https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a webhook configuration for an organization
 ## Get a webhook configuration for an organization
 GET https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}/config
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a webhook delivery for an organization webhook
 ## Get a webhook delivery for an organization webhook
 GET https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}/deliveries/{{delivery_id}}
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organizations
 ## List organizations
 GET https://api.github.com/organizations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List app installations for an organization
 ## List app installations for an organization
 GET https://api.github.com/orgs/{{org}}/installations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List users blocked by an organization
 ## List users blocked by an organization
 GET https://api.github.com/orgs/{{org}}/blocks
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List custom property values for organization repositories
 ## List custom property values for organization repositories
 GET https://api.github.com/orgs/{{org}}/properties/values
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List failed organization invitations
 ## List failed organization invitations
 GET https://api.github.com/orgs/{{org}}/failed_invitations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organizations for the authenticated user
 ## List organizations for the authenticated user
 GET https://api.github.com/user/orgs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organizations for a user
 ## List organizations for a user
 GET https://api.github.com/users/{{username}}/orgs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization invitation teams
 ## List organization invitation teams
 GET https://api.github.com/orgs/{{org}}/invitations/{{invitation_id}}/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization members
 ## List organization members
 GET https://api.github.com/orgs/{{org}}/members
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization memberships for the authenticated user
 ## List organization memberships for the authenticated user
 GET https://api.github.com/user/memberships/orgs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List teams that are assigned to an organization role
 ## List teams that are assigned to an organization role
 GET https://api.github.com/orgs/{{org}}/organization-roles/{{role_id}}/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List users that are assigned to an organization role
 ## List users that are assigned to an organization role
 GET https://api.github.com/orgs/{{org}}/organization-roles/{{role_id}}/users
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all organization roles for an organization
 ## Get all organization roles for an organization
 GET https://api.github.com/orgs/{{org}}/organization-roles
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization fine-grained permissions for an organization
 ## List organization fine-grained permissions for an organization
 GET https://api.github.com/orgs/{{org}}/organization-fine-grained-permissions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List outside collaborators for an organization
 ## List outside collaborators for an organization
 GET https://api.github.com/orgs/{{org}}/outside_collaborators
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories a fine-grained personal access token has access to
 ## List repositories a fine-grained personal access token has access to
 GET https://api.github.com/orgs/{{org}}/personal-access-tokens/{{pat_id}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories requested to be accessed by a fine-grained personal access token
 ## List repositories requested to be accessed by a fine-grained personal access token
 GET https://api.github.com/orgs/{{org}}/personal-access-token-requests/{{pat_request_id}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List requests to access organization resources with fine-grained personal access tokens
 ## List requests to access organization resources with fine-grained personal access tokens
 GET https://api.github.com/orgs/{{org}}/personal-access-token-requests
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List fine-grained personal access tokens with access to organization resources
 ## List fine-grained personal access tokens with access to organization resources
 GET https://api.github.com/orgs/{{org}}/personal-access-tokens
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List pending organization invitations
 ## List pending organization invitations
 GET https://api.github.com/orgs/{{org}}/invitations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List public organization members
 ## List public organization members
 GET https://api.github.com/orgs/{{org}}/public_members
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List security manager teams
 ## List security manager teams
 GET https://api.github.com/orgs/{{org}}/security-managers
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List deliveries for an organization webhook
 ## List deliveries for an organization webhook
 GET https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}/deliveries
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization webhooks
 ## List organization webhooks
 GET https://api.github.com/orgs/{{org}}/hooks
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a custom organization role
 ## Update a custom organization role
 PATCH https://api.github.com/orgs/{{org}}/organization-roles/{{role_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "description" : "Permissions to manage custom roles within an org."
@@ -400,55 +400,55 @@ Authorization: Bearer={{bearerToken}}
 ## Ping an organization webhook
 POST https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}/pings
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Redeliver a delivery for an organization webhook
 ## Redeliver a delivery for an organization webhook
 POST https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}/deliveries/{{delivery_id}}/attempts
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a custom property for an organization
 ## Remove a custom property for an organization
 DELETE https://api.github.com/orgs/{{org}}/properties/schema/{{custom_property_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove an organization member
 ## Remove an organization member
 DELETE https://api.github.com/orgs/{{org}}/members/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove organization membership for a user
 ## Remove organization membership for a user
 DELETE https://api.github.com/orgs/{{org}}/memberships/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove outside collaborator from an organization
 ## Remove outside collaborator from an organization
 DELETE https://api.github.com/orgs/{{org}}/outside_collaborators/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove public organization membership for the authenticated user
 ## Remove public organization membership for the authenticated user
 DELETE https://api.github.com/orgs/{{org}}/public_members/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a security manager team
 ## Remove a security manager team
 DELETE https://api.github.com/orgs/{{org}}/security-managers/teams/{{team_slug}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Review a request to access organization resources with a fine-grained personal access token
 ## Review a request to access organization resources with a fine-grained personal access token
 POST https://api.github.com/orgs/{{org}}/personal-access-token-requests/{{pat_request_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "action" : "deny",
@@ -461,7 +461,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/personal-access-token-requests
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "pat_request_ids" : [ 42, 73 ],
@@ -473,29 +473,29 @@ Authorization: Bearer={{bearerToken}}
 ### Remove all organization roles for a team
 ## Remove all organization roles for a team
 DELETE https://api.github.com/orgs/{{org}}/organization-roles/teams/{{team_slug}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove all organization roles for a user
 ## Remove all organization roles for a user
 DELETE https://api.github.com/orgs/{{org}}/organization-roles/users/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove an organization role from a team
 ## Remove an organization role from a team
 DELETE https://api.github.com/orgs/{{org}}/organization-roles/teams/{{team_slug}}/{{role_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove an organization role from a user
 ## Remove an organization role from a user
 DELETE https://api.github.com/orgs/{{org}}/organization-roles/users/{{username}}/{{role_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Set organization membership for a user
 ## Set organization membership for a user
 PUT https://api.github.com/orgs/{{org}}/memberships/{{username}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "role" : "member"
@@ -506,19 +506,19 @@ Authorization: Bearer={{bearerToken}}
 ## Set public organization membership for the authenticated user
 PUT https://api.github.com/orgs/{{org}}/public_members/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Unblock a user from an organization
 ## Unblock a user from an organization
 DELETE https://api.github.com/orgs/{{org}}/blocks/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update an organization
 ## Update an organization
 PATCH https://api.github.com/orgs/{{org}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "billing_email" : "mona@github.com",
@@ -539,7 +539,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/user/memberships/orgs/{{org}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "state" : "active"
@@ -551,7 +551,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/personal-access-tokens/{{pat_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "action" : "revoke"
@@ -563,7 +563,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/personal-access-tokens
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "action" : "revoke",
@@ -576,7 +576,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "active" : true,
@@ -589,7 +589,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/orgs/{{org}}/hooks/{{hook_id}}/config
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "url" : "http://example.com/webhook",

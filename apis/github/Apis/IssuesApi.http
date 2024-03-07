@@ -5,7 +5,7 @@
 POST https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/assignees
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "assignees" : [ "hubot", "other_user" ]
@@ -17,7 +17,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/labels
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "labels" : [ "bug", "enhancement" ]
@@ -28,13 +28,13 @@ Authorization: Bearer={{bearerToken}}
 ## Check if a user can be assigned
 GET https://api.github.com/repos/{{owner}}/{{repo}}/assignees/{{assignee}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check if a user can be assigned to a issue
 ## Check if a user can be assigned to a issue
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/assignees/{{assignee}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create an issue
 ## Create an issue
@@ -42,7 +42,7 @@ POST https://api.github.com/repos/{{owner}}/{{repo}}/issues
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "Found a bug",
@@ -58,7 +58,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/comments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Me too"
@@ -70,7 +70,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/labels
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "bug",
@@ -84,7 +84,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/milestones
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "v1.0",
@@ -97,139 +97,139 @@ Authorization: Bearer={{bearerToken}}
 ### Delete an issue comment
 ## Delete an issue comment
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/issues/comments/{{comment_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a label
 ## Delete a label
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/labels/{{name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a milestone
 ## Delete a milestone
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/milestones/{{milestone_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an issue
 ## Get an issue
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an issue comment
 ## Get an issue comment
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/comments/{{comment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an issue event
 ## Get an issue event
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/events/{{event_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a label
 ## Get a label
 GET https://api.github.com/repos/{{owner}}/{{repo}}/labels/{{name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a milestone
 ## Get a milestone
 GET https://api.github.com/repos/{{owner}}/{{repo}}/milestones/{{milestone_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List issues assigned to the authenticated user
 ## List issues assigned to the authenticated user
 GET https://api.github.com/issues
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List assignees
 ## List assignees
 GET https://api.github.com/repos/{{owner}}/{{repo}}/assignees
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List issue comments
 ## List issue comments
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List issue comments for a repository
 ## List issue comments for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List issue events
 ## List issue events
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/events
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List issue events for a repository
 ## List issue events for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/events
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List timeline events for an issue
 ## List timeline events for an issue
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/timeline
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List user account issues assigned to the authenticated user
 ## List user account issues assigned to the authenticated user
 GET https://api.github.com/user/issues
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization issues assigned to the authenticated user
 ## List organization issues assigned to the authenticated user
 GET https://api.github.com/orgs/{{org}}/issues
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository issues
 ## List repository issues
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List labels for issues in a milestone
 ## List labels for issues in a milestone
 GET https://api.github.com/repos/{{owner}}/{{repo}}/milestones/{{milestone_number}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List labels for a repository
 ## List labels for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List labels for an issue
 ## List labels for an issue
 GET https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List milestones
 ## List milestones
 GET https://api.github.com/repos/{{owner}}/{{repo}}/milestones
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Lock an issue
 ## Lock an issue
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/lock
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "lock_reason" : "off-topic"
@@ -240,14 +240,14 @@ Authorization: Bearer={{bearerToken}}
 ## Remove all labels from an issue
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove assignees from an issue
 ## Remove assignees from an issue
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/assignees
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "assignees" : [ "hubot", "other_user" ]
@@ -258,14 +258,14 @@ Authorization: Bearer={{bearerToken}}
 ## Remove a label from an issue
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/labels/{{name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Set labels for an issue
 ## Set labels for an issue
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/labels
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "labels" : [ "bug", "enhancement" ]
@@ -276,14 +276,14 @@ Authorization: Bearer={{bearerToken}}
 ## Unlock an issue
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}/lock
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update an issue
 ## Update an issue
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/issues/{{issue_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "Found a bug",
@@ -300,7 +300,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/issues/comments/{{comment_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Me too"
@@ -312,7 +312,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/labels/{{name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "new_name" : "bug :bug:",
@@ -326,7 +326,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/milestones/{{milestone_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "v1.0",

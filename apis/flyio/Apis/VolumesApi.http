@@ -1,0 +1,69 @@
+## VolumesApi
+
+### Create Snapshot
+## Create Snapshot
+POST https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}/snapshots
+
+### Destroy Volume
+## Destroy Volume
+DELETE https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}
+Accept: application/json
+
+### Create Volume
+## Create Volume
+POST https://api.machines.dev/v1/apps/{{app_name}}/volumes
+Content-Type: application/json
+Accept: application/json
+
+{
+ "compute": "<string>",
+ "encrypted": "<string>",
+ "fstype": "<string>",
+ "machines_only": "<string>",
+ "name": "<string>",
+ "region": "<string>",
+ "require_unique_zone": "<string>",
+ "size_gb": "<number>",
+ "snapshot_id": "<string>",
+ "snapshot_retention": "<number>",
+ "source_volume_id": "<string>"
+}
+
+
+### Extend Volume
+## Extend Volume
+PUT https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}/extend
+Content-Type: application/json
+Accept: application/json
+
+{
+ "size_gb": "<number>"
+}
+
+
+### Get Volume
+## Get Volume
+GET https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}
+Accept: application/json
+
+### List Volumes
+## List Volumes
+GET https://api.machines.dev/v1/apps/{{app_name}}/volumes
+Accept: application/json
+
+### List Snapshots
+## List Snapshots
+GET https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}/snapshots
+Accept: application/json
+
+### Update Volume
+## Update Volume
+POST https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}
+Content-Type: application/json
+Accept: application/json
+
+{
+ "auto_backup_enabled": "<string>",
+ "snapshot_retention": "<number>"
+}
+

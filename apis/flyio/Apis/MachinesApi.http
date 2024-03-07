@@ -1,0 +1,159 @@
+## MachinesApi
+
+### Cordon Machine
+## Cordon Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/cordon
+
+### Create Machine
+## Create Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines
+Content-Type: application/json
+Accept: application/json
+
+{
+ "config": "<string>",
+ "lease_ttl": "<number>",
+ "lsvd": "<string>",
+ "name": "<string>",
+ "region": "<string>",
+ "skip_launch": "<string>",
+ "skip_service_registration": "<string>"
+}
+
+
+### Create Lease
+## Create Lease
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/lease
+Content-Type: application/json
+Accept: application/json
+
+{
+ "description": "<string>",
+ "ttl": "<number>"
+}
+
+
+### Destroy Machine
+## Destroy Machine
+DELETE https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}
+
+### Delete Metadata
+## Delete Metadata
+DELETE https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/metadata/{{key}}
+
+### Execute Command
+## Execute Command
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/exec
+Content-Type: application/json
+Accept: application/octet-stream
+Accept: application/json
+
+{
+ "cmd": "<string>",
+ "command": "<string>",
+ "timeout": "<number>"
+}
+
+
+### List Machines
+## List Machines
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines
+Accept: application/json
+
+### List Events
+## List Events
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/events
+Accept: application/json
+
+### List Processes
+## List Processes
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/ps
+Accept: application/json
+
+### List Versions
+## List Versions
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/versions
+Accept: application/json
+
+### Release Lease
+## Release Lease
+DELETE https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/lease
+
+### Restart Machine
+## Restart Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/restart
+Accept: application/json
+
+### Get Machine
+## Get Machine
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}
+Accept: application/json
+
+### Get Lease
+## Get Lease
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/lease
+Accept: application/json
+
+### Get Metadata
+## Get Metadata
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/metadata
+Accept: application/json
+
+### Signal Machine
+## Signal Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/signal
+Content-Type: application/json
+Accept: application/json
+
+{
+ "signal": "<string>"
+}
+
+
+### Start Machine
+## Start Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/start
+
+### Stop Machine
+## Stop Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/stop
+Content-Type: application/json
+Accept: application/json
+
+{
+ "signal": "<string>",
+ "timeout": "<string>"
+}
+
+
+### Uncordon Machine
+## Uncordon Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/uncordon
+
+### Update Machine
+## Update Machine
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}
+Content-Type: application/json
+Accept: application/json
+
+{
+ "config": "<string>",
+ "current_version": "<string>",
+ "lease_ttl": "<number>",
+ "lsvd": "<string>",
+ "name": "<string>",
+ "region": "<string>",
+ "skip_launch": "<string>",
+ "skip_service_registration": "<string>"
+}
+
+
+### Update Metadata
+## Update Metadata
+POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/metadata/{{key}}
+Accept: application/json
+
+### Wait for State
+## Wait for State
+GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/wait
+Accept: application/json

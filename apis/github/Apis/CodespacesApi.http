@@ -4,32 +4,32 @@
 ## Add a selected repository to a user secret
 PUT https://api.github.com/user/codespaces/secrets/{{secret_name}}/repositories/{{repository_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Add selected repository to an organization secret
 ## Add selected repository to an organization secret
 PUT https://api.github.com/orgs/{{org}}/codespaces/secrets/{{secret_name}}/repositories/{{repository_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check if permissions defined by a devcontainer have been accepted by the authenticated user
 ## Check if permissions defined by a devcontainer have been accepted by the authenticated user
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/permissions_check
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List machine types for a codespace
 ## List machine types for a codespace
 GET https://api.github.com/user/codespaces/{{codespace_name}}/machines
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a codespace for the authenticated user
 ## Create a codespace for the authenticated user
 POST https://api.github.com/user/codespaces
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "repository_id" : 1,
@@ -43,7 +43,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/orgs/{{org}}/codespaces/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -58,7 +58,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -71,7 +71,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/user/codespaces/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -85,7 +85,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/codespaces
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "repository_id" : 1,
@@ -99,7 +99,7 @@ POST https://api.github.com/repos/{{owner}}/{{repo}}/codespaces
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "ref" : "main",
@@ -112,7 +112,7 @@ Authorization: Bearer={{bearerToken}}
 DELETE https://api.github.com/orgs/{{org}}/codespaces/access/selected_users
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_usernames" : [ "johnDoe", "atomIO" ]
@@ -123,157 +123,157 @@ Authorization: Bearer={{bearerToken}}
 ## Delete a codespace for the authenticated user
 DELETE https://api.github.com/user/codespaces/{{codespace_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a codespace from the organization
 ## Delete a codespace from the organization
 DELETE https://api.github.com/orgs/{{org}}/members/{{username}}/codespaces/{{codespace_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an organization secret
 ## Delete an organization secret
 DELETE https://api.github.com/orgs/{{org}}/codespaces/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a repository secret
 ## Delete a repository secret
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/secrets/{{secret_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a secret for the authenticated user
 ## Delete a secret for the authenticated user
 DELETE https://api.github.com/user/codespaces/secrets/{{secret_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Export a codespace for the authenticated user
 ## Export a codespace for the authenticated user
 POST https://api.github.com/user/codespaces/{{codespace_name}}/exports
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List codespaces for a user in organization
 ## List codespaces for a user in organization
 GET https://api.github.com/orgs/{{org}}/members/{{username}}/codespaces
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get details about a codespace export
 ## Get details about a codespace export
 GET https://api.github.com/user/codespaces/{{codespace_name}}/exports/{{export_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a codespace for the authenticated user
 ## Get a codespace for the authenticated user
 GET https://api.github.com/user/codespaces/{{codespace_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization public key
 ## Get an organization public key
 GET https://api.github.com/orgs/{{org}}/codespaces/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization secret
 ## Get an organization secret
 GET https://api.github.com/orgs/{{org}}/codespaces/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get public key for the authenticated user
 ## Get public key for the authenticated user
 GET https://api.github.com/user/codespaces/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository public key
 ## Get a repository public key
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository secret
 ## Get a repository secret
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a secret for the authenticated user
 ## Get a secret for the authenticated user
 GET https://api.github.com/user/codespaces/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List devcontainer configurations in a repository for the authenticated user
 ## List devcontainer configurations in a repository for the authenticated user
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/devcontainers
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List codespaces for the authenticated user
 ## List codespaces for the authenticated user
 GET https://api.github.com/user/codespaces
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List codespaces for the organization
 ## List codespaces for the organization
 GET https://api.github.com/orgs/{{org}}/codespaces
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List codespaces in a repository for the authenticated user
 ## List codespaces in a repository for the authenticated user
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization secrets
 ## List organization secrets
 GET https://api.github.com/orgs/{{org}}/codespaces/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository secrets
 ## List repository secrets
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List selected repositories for a user secret
 ## List selected repositories for a user secret
 GET https://api.github.com/user/codespaces/secrets/{{secret_name}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List secrets for the authenticated user
 ## List secrets for the authenticated user
 GET https://api.github.com/user/codespaces/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List selected repositories for an organization secret
 ## List selected repositories for an organization secret
 GET https://api.github.com/orgs/{{org}}/codespaces/secrets/{{secret_name}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get default attributes for a codespace
 ## Get default attributes for a codespace
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/new
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a repository from an unpublished codespace
 ## Create a repository from an unpublished codespace
 POST https://api.github.com/user/codespaces/{{codespace_name}}/publish
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "repository" : "monalisa-octocat-hello-world-g4wpq6h95q",
@@ -285,26 +285,26 @@ Authorization: Bearer={{bearerToken}}
 ## Remove a selected repository from a user secret
 DELETE https://api.github.com/user/codespaces/secrets/{{secret_name}}/repositories/{{repository_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove selected repository from an organization secret
 ## Remove selected repository from an organization secret
 DELETE https://api.github.com/orgs/{{org}}/codespaces/secrets/{{secret_name}}/repositories/{{repository_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List available machine types for a repository
 ## List available machine types for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codespaces/machines
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Manage access control for organization codespaces
 ## Manage access control for organization codespaces
 PUT https://api.github.com/orgs/{{org}}/codespaces/access
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "visibility" : "selected_members",
@@ -317,7 +317,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/codespaces/access/selected_users
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_usernames" : [ "johnDoe", "atomIO" ]
@@ -329,7 +329,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/user/codespaces/secrets/{{secret_name}}/repositories
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_repository_ids" : [ "1296269", "1296280" ]
@@ -341,7 +341,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/orgs/{{org}}/codespaces/secrets/{{secret_name}}/repositories
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_repository_ids" : [ 64780797 ]
@@ -353,26 +353,26 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/user/codespaces/{{codespace_name}}/start
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Stop a codespace for the authenticated user
 ## Stop a codespace for the authenticated user
 POST https://api.github.com/user/codespaces/{{codespace_name}}/stop
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Stop a codespace for an organization user
 ## Stop a codespace for an organization user
 POST https://api.github.com/orgs/{{org}}/members/{{username}}/codespaces/{{codespace_name}}/stop
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a codespace for the authenticated user
 ## Update a codespace for the authenticated user
 PATCH https://api.github.com/user/codespaces/{{codespace_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "machine" : "standardLinux"

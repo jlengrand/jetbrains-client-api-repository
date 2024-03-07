@@ -5,7 +5,7 @@
 PUT https://api.github.com/projects/{{project_id}}/collaborators/{{username}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "permission" : "write"
@@ -17,7 +17,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/projects/columns/{{column_id}}/cards
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "note" : "Add payload for delete Project column"
@@ -29,7 +29,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/projects/{{project_id}}/columns
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Remaining tasks"
@@ -41,7 +41,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/user/projects
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "My Projects",
@@ -54,7 +54,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/projects
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Organization Roadmap",
@@ -67,7 +67,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/projects
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Projects Documentation",
@@ -79,86 +79,86 @@ Authorization: Bearer={{bearerToken}}
 ## Delete a project
 DELETE https://api.github.com/projects/{{project_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a project card
 ## Delete a project card
 DELETE https://api.github.com/projects/columns/cards/{{card_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a project column
 ## Delete a project column
 DELETE https://api.github.com/projects/columns/{{column_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a project
 ## Get a project
 GET https://api.github.com/projects/{{project_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a project card
 ## Get a project card
 GET https://api.github.com/projects/columns/cards/{{card_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a project column
 ## Get a project column
 GET https://api.github.com/projects/columns/{{column_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get project permission for a user
 ## Get project permission for a user
 GET https://api.github.com/projects/{{project_id}}/collaborators/{{username}}/permission
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List project cards
 ## List project cards
 GET https://api.github.com/projects/columns/{{column_id}}/cards
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List project collaborators
 ## List project collaborators
 GET https://api.github.com/projects/{{project_id}}/collaborators
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List project columns
 ## List project columns
 GET https://api.github.com/projects/{{project_id}}/columns
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization projects
 ## List organization projects
 GET https://api.github.com/orgs/{{org}}/projects
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository projects
 ## List repository projects
 GET https://api.github.com/repos/{{owner}}/{{repo}}/projects
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List user projects
 ## List user projects
 GET https://api.github.com/users/{{username}}/projects
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Move a project card
 ## Move a project card
 POST https://api.github.com/projects/columns/cards/{{card_id}}/moves
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "column_id" : 42,
@@ -171,7 +171,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/projects/columns/{{column_id}}/moves
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "position" : "last"
@@ -182,14 +182,14 @@ Authorization: Bearer={{bearerToken}}
 ## Remove user as a collaborator
 DELETE https://api.github.com/projects/{{project_id}}/collaborators/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a project
 ## Update a project
 PATCH https://api.github.com/projects/{{project_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Week One Sprint",
@@ -203,7 +203,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/projects/columns/cards/{{card_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "note" : "Add payload for delete Project column"
@@ -215,7 +215,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/projects/columns/{{column_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "To Do"

@@ -5,7 +5,7 @@
 POST https://api.github.com/repos/{{owner}}/{{repo}}/git/blobs
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "content" : "Content of the blob",
@@ -18,7 +18,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/git/commits
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "message" : "my commit message",
@@ -38,7 +38,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/git/refs
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "ref" : "refs/heads/featureA",
@@ -51,7 +51,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/git/tags
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "tag" : "v0.0.1",
@@ -71,7 +71,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/git/trees
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "base_tree" : "9fb037999f264ba9a7fc6274d15fa3ae2ab98312",
@@ -88,50 +88,50 @@ Authorization: Bearer={{bearerToken}}
 ## Delete a reference
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/git/refs/{{ref}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a blob
 ## Get a blob
 GET https://api.github.com/repos/{{owner}}/{{repo}}/git/blobs/{{file_sha}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a commit object
 ## Get a commit object
 GET https://api.github.com/repos/{{owner}}/{{repo}}/git/commits/{{commit_sha}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a reference
 ## Get a reference
 GET https://api.github.com/repos/{{owner}}/{{repo}}/git/ref/{{ref}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a tag
 ## Get a tag
 GET https://api.github.com/repos/{{owner}}/{{repo}}/git/tags/{{tag_sha}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a tree
 ## Get a tree
 GET https://api.github.com/repos/{{owner}}/{{repo}}/git/trees/{{tree_sha}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List matching references
 ## List matching references
 GET https://api.github.com/repos/{{owner}}/{{repo}}/git/matching-refs/{{ref}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a reference
 ## Update a reference
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/git/refs/{{ref}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "sha" : "aa218f56b14c9653891f9e74264a383fa43fefbd",

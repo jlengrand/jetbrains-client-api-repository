@@ -4,14 +4,14 @@
 ## Add a repository to an app installation
 PUT https://api.github.com/user/installations/{{installation_id}}/repositories/{{repository_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check a token
 ## Check a token
 POST https://api.github.com/applications/{{client_id}}/token
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "access_token" : "e72e16c7e42f292c6912e7710c838347ae178b4a"
@@ -22,14 +22,14 @@ Authorization: Bearer={{bearerToken}}
 ## Create a GitHub App from a manifest
 POST https://api.github.com/app-manifests/{{code}}/conversions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create an installation access token for an app
 ## Create an installation access token for an app
 POST https://api.github.com/app/installations/{{installation_id}}/access_tokens
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "repositories" : [ "Hello-World" ],
@@ -45,7 +45,7 @@ Authorization: Bearer={{bearerToken}}
 DELETE https://api.github.com/applications/{{client_id}}/grant
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "access_token" : "e72e16c7e42f292c6912e7710c838347ae178b4a"
@@ -56,14 +56,14 @@ Authorization: Bearer={{bearerToken}}
 ## Delete an installation for the authenticated app
 DELETE https://api.github.com/app/installations/{{installation_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an app token
 ## Delete an app token
 DELETE https://api.github.com/applications/{{client_id}}/token
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "access_token" : "e72e16c7e42f292c6912e7710c838347ae178b4a"
@@ -74,155 +74,155 @@ Authorization: Bearer={{bearerToken}}
 ## Get the authenticated app
 GET https://api.github.com/app
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an app
 ## Get an app
 GET https://api.github.com/apps/{{app_slug}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an installation for the authenticated app
 ## Get an installation for the authenticated app
 GET https://api.github.com/app/installations/{{installation_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization installation for the authenticated app
 ## Get an organization installation for the authenticated app
 GET https://api.github.com/orgs/{{org}}/installation
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository installation for the authenticated app
 ## Get a repository installation for the authenticated app
 GET https://api.github.com/repos/{{owner}}/{{repo}}/installation
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a subscription plan for an account
 ## Get a subscription plan for an account
 GET https://api.github.com/marketplace_listing/accounts/{{account_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a subscription plan for an account (stubbed)
 ## Get a subscription plan for an account (stubbed)
 GET https://api.github.com/marketplace_listing/stubbed/accounts/{{account_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a user installation for the authenticated app
 ## Get a user installation for the authenticated app
 GET https://api.github.com/users/{{username}}/installation
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a webhook configuration for an app
 ## Get a webhook configuration for an app
 GET https://api.github.com/app/hook/config
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a delivery for an app webhook
 ## Get a delivery for an app webhook
 GET https://api.github.com/app/hook/deliveries/{{delivery_id}}
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List accounts for a plan
 ## List accounts for a plan
 GET https://api.github.com/marketplace_listing/plans/{{plan_id}}/accounts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List accounts for a plan (stubbed)
 ## List accounts for a plan (stubbed)
 GET https://api.github.com/marketplace_listing/stubbed/plans/{{plan_id}}/accounts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories accessible to the user access token
 ## List repositories accessible to the user access token
 GET https://api.github.com/user/installations/{{installation_id}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List installation requests for the authenticated app
 ## List installation requests for the authenticated app
 GET https://api.github.com/app/installation-requests
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List installations for the authenticated app
 ## List installations for the authenticated app
 GET https://api.github.com/app/installations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List app installations accessible to the user access token
 ## List app installations accessible to the user access token
 GET https://api.github.com/user/installations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List plans
 ## List plans
 GET https://api.github.com/marketplace_listing/plans
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List plans (stubbed)
 ## List plans (stubbed)
 GET https://api.github.com/marketplace_listing/stubbed/plans
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories accessible to the app installation
 ## List repositories accessible to the app installation
 GET https://api.github.com/installation/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List subscriptions for the authenticated user
 ## List subscriptions for the authenticated user
 GET https://api.github.com/user/marketplace_purchases
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List subscriptions for the authenticated user (stubbed)
 ## List subscriptions for the authenticated user (stubbed)
 GET https://api.github.com/user/marketplace_purchases/stubbed
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List deliveries for an app webhook
 ## List deliveries for an app webhook
 GET https://api.github.com/app/hook/deliveries
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Redeliver a delivery for an app webhook
 ## Redeliver a delivery for an app webhook
 POST https://api.github.com/app/hook/deliveries/{{delivery_id}}/attempts
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a repository from an app installation
 ## Remove a repository from an app installation
 DELETE https://api.github.com/user/installations/{{installation_id}}/repositories/{{repository_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Reset a token
 ## Reset a token
 PATCH https://api.github.com/applications/{{client_id}}/token
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "access_token" : "e72e16c7e42f292c6912e7710c838347ae178b4a"
@@ -232,14 +232,14 @@ Authorization: Bearer={{bearerToken}}
 ### Revoke an installation access token
 ## Revoke an installation access token
 DELETE https://api.github.com/installation/token
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a scoped access token
 ## Create a scoped access token
 POST https://api.github.com/applications/{{client_id}}/token/scoped
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "access_token" : "e72e16c7e42f292c6912e7710c838347ae178b4a",
@@ -256,20 +256,20 @@ Authorization: Bearer={{bearerToken}}
 ## Suspend an app installation
 PUT https://api.github.com/app/installations/{{installation_id}}/suspended
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Unsuspend an app installation
 ## Unsuspend an app installation
 DELETE https://api.github.com/app/installations/{{installation_id}}/suspended
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a webhook configuration for an app
 ## Update a webhook configuration for an app
 PATCH https://api.github.com/app/hook/config
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "content_type" : "json",

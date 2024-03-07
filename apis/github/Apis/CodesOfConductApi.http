@@ -4,10 +4,10 @@
 ## Get all codes of conduct
 GET https://api.github.com/codes_of_conduct
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a code of conduct
 ## Get a code of conduct
 GET https://api.github.com/codes_of_conduct/{{key}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}

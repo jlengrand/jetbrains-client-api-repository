@@ -5,7 +5,7 @@
 POST https://api.github.com/repos/{{owner}}/{{repo}}/dependency-graph/snapshots
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "version" : 0,
@@ -49,10 +49,10 @@ Authorization: Bearer={{bearerToken}}
 ## Get a diff of the dependencies between commits
 GET https://api.github.com/repos/{{owner}}/{{repo}}/dependency-graph/compare/{{basehead}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Export a software bill of materials (SBOM) for a repository.
 ## Export a software bill of materials (SBOM) for a repository.
 GET https://api.github.com/repos/{{owner}}/{{repo}}/dependency-graph/sbom
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}

@@ -4,92 +4,92 @@
 ## Cancel an import
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/import
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a user migration archive
 ## Delete a user migration archive
 DELETE https://api.github.com/user/migrations/{{migration_id}}/archive
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an organization migration archive
 ## Delete an organization migration archive
 DELETE https://api.github.com/orgs/{{org}}/migrations/{{migration_id}}/archive
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download an organization migration archive
 ## Download an organization migration archive
 GET https://api.github.com/orgs/{{org}}/migrations/{{migration_id}}/archive
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download a user migration archive
 ## Download a user migration archive
 GET https://api.github.com/user/migrations/{{migration_id}}/archive
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get commit authors
 ## Get commit authors
 GET https://api.github.com/repos/{{owner}}/{{repo}}/import/authors
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an import status
 ## Get an import status
 GET https://api.github.com/repos/{{owner}}/{{repo}}/import
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get large files
 ## Get large files
 GET https://api.github.com/repos/{{owner}}/{{repo}}/import/large_files
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a user migration status
 ## Get a user migration status
 GET https://api.github.com/user/migrations/{{migration_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization migration status
 ## Get an organization migration status
 GET https://api.github.com/orgs/{{org}}/migrations/{{migration_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List user migrations
 ## List user migrations
 GET https://api.github.com/user/migrations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization migrations
 ## List organization migrations
 GET https://api.github.com/orgs/{{org}}/migrations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories for a user migration
 ## List repositories for a user migration
 GET https://api.github.com/user/migrations/{{migration_id}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories in an organization migration
 ## List repositories in an organization migration
 GET https://api.github.com/orgs/{{org}}/migrations/{{migration_id}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Map a commit author
 ## Map a commit author
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/import/authors/{{author_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "email" : "hubot@github.com",
@@ -102,7 +102,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/import/lfs
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "use_lfs" : "opt_in"
@@ -114,7 +114,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/user/migrations
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "repositories" : [ "octocat/Hello-World" ],
@@ -127,7 +127,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/migrations
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "repositories" : [ "github/Hello-World" ],
@@ -140,7 +140,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/import
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "vcs" : "subversion",
@@ -154,20 +154,20 @@ Authorization: Bearer={{bearerToken}}
 ## Unlock a user repository
 DELETE https://api.github.com/user/migrations/{{migration_id}}/repos/{{repo_name}}/lock
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Unlock an organization repository
 ## Unlock an organization repository
 DELETE https://api.github.com/orgs/{{org}}/migrations/{{migration_id}}/repos/{{repo_name}}/lock
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update an import
 ## Update an import
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/import
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "vcs_username" : "octocat",

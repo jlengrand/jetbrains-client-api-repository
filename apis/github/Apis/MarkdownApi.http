@@ -5,7 +5,7 @@
 POST https://api.github.com/markdown
 Content-Type: application/json
 Accept: text/html
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "text" : "Hello **world**"
@@ -18,7 +18,7 @@ POST https://api.github.com/markdown/raw
 Content-Type: text/plain
 Content-Type: text/x-markdown
 Accept: text/html
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "text" : "Hello **world**"

@@ -5,7 +5,7 @@
 POST https://api.github.com/orgs/{{org}}/actions/runners/{{runner_id}}/labels
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "labels" : [ "gpu", "accelerated" ]
@@ -17,7 +17,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/{{runner_id}}/labels
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "labels" : [ "gpu", "accelerated" ]
@@ -27,31 +27,31 @@ Authorization: Bearer={{bearerToken}}
 ### Add selected repository to an organization secret
 ## Add selected repository to an organization secret
 PUT https://api.github.com/orgs/{{org}}/actions/secrets/{{secret_name}}/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Add selected repository to an organization variable
 ## Add selected repository to an organization variable
 PUT https://api.github.com/orgs/{{org}}/actions/variables/{{name}}/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Approve a workflow run for a fork pull request
 ## Approve a workflow run for a fork pull request
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/approve
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Cancel a workflow run
 ## Cancel a workflow run
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/cancel
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create an environment variable
 ## Create an environment variable
 POST https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/variables
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "USERNAME",
@@ -64,7 +64,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -77,7 +77,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/orgs/{{org}}/actions/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -92,7 +92,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/secrets/{{secret_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "encrypted_value" : "c2VjcmV0",
@@ -105,7 +105,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/actions/variables
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "USERNAME",
@@ -119,32 +119,32 @@ Authorization: Bearer={{bearerToken}}
 ## Create a registration token for an organization
 POST https://api.github.com/orgs/{{org}}/actions/runners/registration-token
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a registration token for a repository
 ## Create a registration token for a repository
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/registration-token
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a remove token for an organization
 ## Create a remove token for an organization
 POST https://api.github.com/orgs/{{org}}/actions/runners/remove-token
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a remove token for a repository
 ## Create a remove token for a repository
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/remove-token
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a repository variable
 ## Create a repository variable
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/variables
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "USERNAME",
@@ -156,7 +156,7 @@ Authorization: Bearer={{bearerToken}}
 ## Create a workflow dispatch event
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/workflows/{{workflow_id}}/dispatches
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "ref" : "topic-branch",
@@ -170,123 +170,123 @@ Authorization: Bearer={{bearerToken}}
 ### Delete a GitHub Actions cache for a repository (using a cache ID)
 ## Delete a GitHub Actions cache for a repository (using a cache ID)
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/caches/{{cache_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete GitHub Actions caches for a repository (using a cache key)
 ## Delete GitHub Actions caches for a repository (using a cache key)
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/caches
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an artifact
 ## Delete an artifact
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/artifacts/{{artifact_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an environment secret
 ## Delete an environment secret
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/secrets/{{secret_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an environment variable
 ## Delete an environment variable
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/variables/{{name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an organization secret
 ## Delete an organization secret
 DELETE https://api.github.com/orgs/{{org}}/actions/secrets/{{secret_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an organization variable
 ## Delete an organization variable
 DELETE https://api.github.com/orgs/{{org}}/actions/variables/{{name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a repository secret
 ## Delete a repository secret
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/secrets/{{secret_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a repository variable
 ## Delete a repository variable
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/variables/{{name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a self-hosted runner from an organization
 ## Delete a self-hosted runner from an organization
 DELETE https://api.github.com/orgs/{{org}}/actions/runners/{{runner_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a self-hosted runner from a repository
 ## Delete a self-hosted runner from a repository
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/{{runner_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a workflow run
 ## Delete a workflow run
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete workflow run logs
 ## Delete workflow run logs
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/logs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Disable a selected repository for GitHub Actions in an organization
 ## Disable a selected repository for GitHub Actions in an organization
 DELETE https://api.github.com/orgs/{{org}}/actions/permissions/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Disable a workflow
 ## Disable a workflow
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/workflows/{{workflow_id}}/disable
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download an artifact
 ## Download an artifact
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/artifacts/{{artifact_id}}/{{archive_format}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download job logs for a workflow run
 ## Download job logs for a workflow run
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/jobs/{{job_id}}/logs
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download workflow run attempt logs
 ## Download workflow run attempt logs
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/attempts/{{attempt_number}}/logs
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download workflow run logs
 ## Download workflow run logs
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/logs
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Enable a selected repository for GitHub Actions in an organization
 ## Enable a selected repository for GitHub Actions in an organization
 PUT https://api.github.com/orgs/{{org}}/actions/permissions/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Enable a workflow
 ## Enable a workflow
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/workflows/{{workflow_id}}/enable
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Force cancel a workflow run
 ## Force cancel a workflow run
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/force-cancel
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create configuration for a just-in-time runner for an organization
 ## Create configuration for a just-in-time runner for an organization
 POST https://api.github.com/orgs/{{org}}/actions/runners/generate-jitconfig
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "New runner",
@@ -301,7 +301,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/generate-jitconfig
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "New runner",
@@ -315,338 +315,338 @@ Authorization: Bearer={{bearerToken}}
 ## List GitHub Actions caches for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/caches
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get GitHub Actions cache usage for a repository
 ## Get GitHub Actions cache usage for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/cache/usage
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories with GitHub Actions cache usage for an organization
 ## List repositories with GitHub Actions cache usage for an organization
 GET https://api.github.com/orgs/{{org}}/actions/cache/usage-by-repository
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get GitHub Actions cache usage for an organization
 ## Get GitHub Actions cache usage for an organization
 GET https://api.github.com/orgs/{{org}}/actions/cache/usage
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get allowed actions and reusable workflows for an organization
 ## Get allowed actions and reusable workflows for an organization
 GET https://api.github.com/orgs/{{org}}/actions/permissions/selected-actions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get allowed actions and reusable workflows for a repository
 ## Get allowed actions and reusable workflows for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions/selected-actions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an artifact
 ## Get an artifact
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/artifacts/{{artifact_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the customization template for an OIDC subject claim for a repository
 ## Get the customization template for an OIDC subject claim for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/oidc/customization/sub
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an environment public key
 ## Get an environment public key
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an environment secret
 ## Get an environment secret
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an environment variable
 ## Get an environment variable
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/variables/{{name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get default workflow permissions for an organization
 ## Get default workflow permissions for an organization
 GET https://api.github.com/orgs/{{org}}/actions/permissions/workflow
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get default workflow permissions for a repository
 ## Get default workflow permissions for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions/workflow
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get GitHub Actions permissions for an organization
 ## Get GitHub Actions permissions for an organization
 GET https://api.github.com/orgs/{{org}}/actions/permissions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get GitHub Actions permissions for a repository
 ## Get GitHub Actions permissions for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a job for a workflow run
 ## Get a job for a workflow run
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/jobs/{{job_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization public key
 ## Get an organization public key
 GET https://api.github.com/orgs/{{org}}/actions/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization secret
 ## Get an organization secret
 GET https://api.github.com/orgs/{{org}}/actions/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization variable
 ## Get an organization variable
 GET https://api.github.com/orgs/{{org}}/actions/variables/{{name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get pending deployments for a workflow run
 ## Get pending deployments for a workflow run
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/pending_deployments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository public key
 ## Get a repository public key
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/secrets/public-key
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository secret
 ## Get a repository secret
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/secrets/{{secret_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository variable
 ## Get a repository variable
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/variables/{{name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the review history for a workflow run
 ## Get the review history for a workflow run
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/approvals
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a self-hosted runner for an organization
 ## Get a self-hosted runner for an organization
 GET https://api.github.com/orgs/{{org}}/actions/runners/{{runner_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a self-hosted runner for a repository
 ## Get a self-hosted runner for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/{{runner_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a workflow
 ## Get a workflow
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/workflows/{{workflow_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the level of access for workflows outside of the repository
 ## Get the level of access for workflows outside of the repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions/access
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a workflow run
 ## Get a workflow run
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a workflow run attempt
 ## Get a workflow run attempt
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/attempts/{{attempt_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get workflow run usage
 ## Get workflow run usage
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/timing
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get workflow usage
 ## Get workflow usage
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/workflows/{{workflow_id}}/timing
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List artifacts for a repository
 ## List artifacts for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/artifacts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List environment secrets
 ## List environment secrets
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List environment variables
 ## List environment variables
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/variables
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List jobs for a workflow run
 ## List jobs for a workflow run
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/jobs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List jobs for a workflow run attempt
 ## List jobs for a workflow run attempt
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/attempts/{{attempt_number}}/jobs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List labels for a self-hosted runner for an organization
 ## List labels for a self-hosted runner for an organization
 GET https://api.github.com/orgs/{{org}}/actions/runners/{{runner_id}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List labels for a self-hosted runner for a repository
 ## List labels for a self-hosted runner for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/{{runner_id}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization secrets
 ## List organization secrets
 GET https://api.github.com/orgs/{{org}}/actions/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization variables
 ## List organization variables
 GET https://api.github.com/orgs/{{org}}/actions/variables
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository organization secrets
 ## List repository organization secrets
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/organization-secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository organization variables
 ## List repository organization variables
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/organization-variables
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository secrets
 ## List repository secrets
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/secrets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository variables
 ## List repository variables
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/variables
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository workflows
 ## List repository workflows
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/workflows
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List runner applications for an organization
 ## List runner applications for an organization
 GET https://api.github.com/orgs/{{org}}/actions/runners/downloads
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List runner applications for a repository
 ## List runner applications for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/downloads
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List selected repositories for an organization secret
 ## List selected repositories for an organization secret
 GET https://api.github.com/orgs/{{org}}/actions/secrets/{{secret_name}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List selected repositories for an organization variable
 ## List selected repositories for an organization variable
 GET https://api.github.com/orgs/{{org}}/actions/variables/{{name}}/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List selected repositories enabled for GitHub Actions in an organization
 ## List selected repositories enabled for GitHub Actions in an organization
 GET https://api.github.com/orgs/{{org}}/actions/permissions/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List self-hosted runners for an organization
 ## List self-hosted runners for an organization
 GET https://api.github.com/orgs/{{org}}/actions/runners
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List self-hosted runners for a repository
 ## List self-hosted runners for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List workflow run artifacts
 ## List workflow run artifacts
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/artifacts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List workflow runs for a workflow
 ## List workflow runs for a workflow
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/workflows/{{workflow_id}}/runs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List workflow runs for a repository
 ## List workflow runs for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 
 
@@ -655,41 +655,41 @@ Authorization: Bearer={{bearerToken}}
 ## Remove all custom labels from a self-hosted runner for an organization
 DELETE https://api.github.com/orgs/{{org}}/actions/runners/{{runner_id}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove all custom labels from a self-hosted runner for a repository
 ## Remove all custom labels from a self-hosted runner for a repository
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/{{runner_id}}/labels
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a custom label from a self-hosted runner for an organization
 ## Remove a custom label from a self-hosted runner for an organization
 DELETE https://api.github.com/orgs/{{org}}/actions/runners/{{runner_id}}/labels/{{name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a custom label from a self-hosted runner for a repository
 ## Remove a custom label from a self-hosted runner for a repository
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/{{runner_id}}/labels/{{name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove selected repository from an organization secret
 ## Remove selected repository from an organization secret
 DELETE https://api.github.com/orgs/{{org}}/actions/secrets/{{secret_name}}/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove selected repository from an organization variable
 ## Remove selected repository from an organization variable
 DELETE https://api.github.com/orgs/{{org}}/actions/variables/{{name}}/repositories/{{repository_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Review custom deployment protection rules for a workflow run
 ## Review custom deployment protection rules for a workflow run
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/deployment_protection_rule
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "environment_name" : "prod-eus",
@@ -703,7 +703,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/actions/runs/{{run_id}}/pending_deployments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "environment_ids" : [ 161171787 ],
@@ -716,7 +716,7 @@ Authorization: Bearer={{bearerToken}}
 ## 
 PUT https://api.github.com/orgs/{{org}}/actions/permissions/selected-actions
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "github_owned_allowed" : true,
@@ -729,7 +729,7 @@ Authorization: Bearer={{bearerToken}}
 ## 
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions/selected-actions
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "github_owned_allowed" : true,
@@ -743,7 +743,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/orgs/{{org}}/actions/runners/{{runner_id}}/labels
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "labels" : [ "gpu", "accelerated" ]
@@ -755,7 +755,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/runners/{{runner_id}}/labels
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "labels" : [ "gpu", "accelerated" ]
@@ -768,7 +768,7 @@ PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/oidc/customization/s
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "use_default" : false,
@@ -780,7 +780,7 @@ Authorization: Bearer={{bearerToken}}
 ## Give read-only permission, and allow approving PRs.
 PUT https://api.github.com/orgs/{{org}}/actions/permissions/workflow
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "default_workflow_permissions" : "read",
@@ -792,7 +792,7 @@ Authorization: Bearer={{bearerToken}}
 ## Give read-only permission, and allow approving PRs.
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions/workflow
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "default_workflow_permissions" : "read",
@@ -804,7 +804,7 @@ Authorization: Bearer={{bearerToken}}
 ## Set GitHub Actions permissions for an organization
 PUT https://api.github.com/orgs/{{org}}/actions/permissions
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "enabled_repositories" : "all",
@@ -816,7 +816,7 @@ Authorization: Bearer={{bearerToken}}
 ## Set GitHub Actions permissions for a repository
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "enabled" : true,
@@ -828,7 +828,7 @@ Authorization: Bearer={{bearerToken}}
 ## Set selected repositories for an organization secret
 PUT https://api.github.com/orgs/{{org}}/actions/secrets/{{secret_name}}/repositories
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_repository_ids" : [ 64780797 ]
@@ -839,7 +839,7 @@ Authorization: Bearer={{bearerToken}}
 ## Set selected repositories for an organization variable
 PUT https://api.github.com/orgs/{{org}}/actions/variables/{{name}}/repositories
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_repository_ids" : [ 64780797 ]
@@ -850,7 +850,7 @@ Authorization: Bearer={{bearerToken}}
 ## Set selected repositories enabled for GitHub Actions in an organization
 PUT https://api.github.com/orgs/{{org}}/actions/permissions/repositories
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_repository_ids" : [ 32, 42 ]
@@ -861,7 +861,7 @@ Authorization: Bearer={{bearerToken}}
 ## 
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/actions/permissions/access
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "access_level" : "organization"
@@ -872,7 +872,7 @@ Authorization: Bearer={{bearerToken}}
 ## Update an environment variable
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/variables/{{name}}
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "USERNAME",
@@ -884,7 +884,7 @@ Authorization: Bearer={{bearerToken}}
 ## Update an organization variable
 PATCH https://api.github.com/orgs/{{org}}/actions/variables/{{name}}
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "USERNAME",
@@ -898,7 +898,7 @@ Authorization: Bearer={{bearerToken}}
 ## Update a repository variable
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/actions/variables/{{name}}
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "USERNAME",

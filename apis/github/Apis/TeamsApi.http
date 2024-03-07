@@ -4,14 +4,14 @@
 ## Add team member (Legacy)
 PUT https://api.github.com/teams/{{team_id}}/members/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Add or update team membership for a user
 ## Add or update team membership for a user
 PUT https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/memberships/{{username}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "role" : "maintainer"
@@ -23,7 +23,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/teams/{{team_id}}/memberships/{{username}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "role" : "member"
@@ -35,7 +35,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/projects/{{project_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "permission" : "write"
@@ -47,7 +47,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/teams/{{team_id}}/projects/{{project_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "permission" : "read"
@@ -58,7 +58,7 @@ Authorization: Bearer={{bearerToken}}
 ## Add or update team repository permissions
 PUT https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/repos/{{owner}}/{{repo}}
 Content-Type: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "permission" : "push"
@@ -70,7 +70,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/teams/{{team_id}}/repos/{{owner}}/{{repo}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "permission" : "push"
@@ -81,32 +81,32 @@ Authorization: Bearer={{bearerToken}}
 ## Check team permissions for a project
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/projects/{{project_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check team permissions for a project (Legacy)
 ## Check team permissions for a project (Legacy)
 GET https://api.github.com/teams/{{team_id}}/projects/{{project_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check team permissions for a repository
 ## Check team permissions for a repository
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/repos/{{owner}}/{{repo}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check team permissions for a repository (Legacy)
 ## Check team permissions for a repository (Legacy)
 GET https://api.github.com/teams/{{team_id}}/repos/{{owner}}/{{repo}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a team
 ## Create a team
 POST https://api.github.com/orgs/{{org}}/teams
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Justice League",
@@ -122,7 +122,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}/comments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Do you like apples?"
@@ -134,7 +134,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}/comments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Do you like apples?"
@@ -146,7 +146,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "Our first team post",
@@ -159,7 +159,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/teams/{{team_id}}/discussions
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "Our first team post",
@@ -170,225 +170,225 @@ Authorization: Bearer={{bearerToken}}
 ### Delete a discussion comment
 ## Delete a discussion comment
 DELETE https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}/comments/{{comment_number}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a discussion comment (Legacy)
 ## Delete a discussion comment (Legacy)
 DELETE https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}/comments/{{comment_number}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a discussion
 ## Delete a discussion
 DELETE https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a discussion (Legacy)
 ## Delete a discussion (Legacy)
 DELETE https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a team
 ## Delete a team
 DELETE https://api.github.com/orgs/{{org}}/teams/{{team_slug}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a team (Legacy)
 ## Delete a team (Legacy)
 DELETE https://api.github.com/teams/{{team_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a team by name
 ## Get a team by name
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a discussion comment
 ## Get a discussion comment
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}/comments/{{comment_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a discussion comment (Legacy)
 ## Get a discussion comment (Legacy)
 GET https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}/comments/{{comment_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a discussion
 ## Get a discussion
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a discussion (Legacy)
 ## Get a discussion (Legacy)
 GET https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a team (Legacy)
 ## Get a team (Legacy)
 GET https://api.github.com/teams/{{team_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get team member (Legacy)
 ## Get team member (Legacy)
 GET https://api.github.com/teams/{{team_id}}/members/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get team membership for a user
 ## Get team membership for a user
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/memberships/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get team membership for a user (Legacy)
 ## Get team membership for a user (Legacy)
 GET https://api.github.com/teams/{{team_id}}/memberships/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List teams
 ## List teams
 GET https://api.github.com/orgs/{{org}}/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List child teams
 ## List child teams
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List child teams (Legacy)
 ## List child teams (Legacy)
 GET https://api.github.com/teams/{{team_id}}/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List discussion comments
 ## List discussion comments
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List discussion comments (Legacy)
 ## List discussion comments (Legacy)
 GET https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List discussions
 ## List discussions
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List discussions (Legacy)
 ## List discussions (Legacy)
 GET https://api.github.com/teams/{{team_id}}/discussions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List teams for the authenticated user
 ## List teams for the authenticated user
 GET https://api.github.com/user/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List team members
 ## List team members
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/members
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List team members (Legacy)
 ## List team members (Legacy)
 GET https://api.github.com/teams/{{team_id}}/members
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List pending team invitations
 ## List pending team invitations
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/invitations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List pending team invitations (Legacy)
 ## List pending team invitations (Legacy)
 GET https://api.github.com/teams/{{team_id}}/invitations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List team projects
 ## List team projects
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/projects
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List team projects (Legacy)
 ## List team projects (Legacy)
 GET https://api.github.com/teams/{{team_id}}/projects
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List team repositories
 ## List team repositories
 GET https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/repos
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List team repositories (Legacy)
 ## List team repositories (Legacy)
 GET https://api.github.com/teams/{{team_id}}/repos
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove team member (Legacy)
 ## Remove team member (Legacy)
 DELETE https://api.github.com/teams/{{team_id}}/members/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove team membership for a user
 ## Remove team membership for a user
 DELETE https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/memberships/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove team membership for a user (Legacy)
 ## Remove team membership for a user (Legacy)
 DELETE https://api.github.com/teams/{{team_id}}/memberships/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a project from a team
 ## Remove a project from a team
 DELETE https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/projects/{{project_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a project from a team (Legacy)
 ## Remove a project from a team (Legacy)
 DELETE https://api.github.com/teams/{{team_id}}/projects/{{project_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a repository from a team
 ## Remove a repository from a team
 DELETE https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/repos/{{owner}}/{{repo}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove a repository from a team (Legacy)
 ## Remove a repository from a team (Legacy)
 DELETE https://api.github.com/teams/{{team_id}}/repos/{{owner}}/{{repo}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a discussion comment
 ## Update a discussion comment
 PATCH https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}/comments/{{comment_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Do you like pineapples?"
@@ -400,7 +400,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}/comments/{{comment_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Do you like pineapples?"
@@ -412,7 +412,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/orgs/{{org}}/teams/{{team_slug}}/discussions/{{discussion_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "Welcome to our first team post"
@@ -424,7 +424,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/teams/{{team_id}}/discussions/{{discussion_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "Welcome to our first team post"
@@ -436,7 +436,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/orgs/{{org}}/teams/{{team_slug}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "new team name",
@@ -451,7 +451,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/teams/{{team_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "new team name",

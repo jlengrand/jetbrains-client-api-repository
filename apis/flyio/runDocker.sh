@@ -1,8 +1,9 @@
 #!/bin/sh
 
+# The file was found here : https://community.fly.io/t/fly-machines-rest-api-openapi-specification/8207/8
+
 docker run --rm \
   -v ${PWD}:/local julienlengrand/jetbrains-openapi-generator generate \
-  -i /local/api.github.com.json \
+  -i /local/doc.json \
   -g jetbrains-http-client \
-  --additional-properties=customHeaders="Authorization: Bearer {{bearerToken}}" \
   -o /local

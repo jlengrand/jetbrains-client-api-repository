@@ -4,16 +4,16 @@
 ## Get a license
 GET https://api.github.com/licenses/{{license}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all commonly used licenses
 ## Get all commonly used licenses
 GET https://api.github.com/licenses
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the license for a repository
 ## Get the license for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/license
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}

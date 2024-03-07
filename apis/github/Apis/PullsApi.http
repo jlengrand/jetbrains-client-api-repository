@@ -3,14 +3,14 @@
 ### Check if a pull request has been merged
 ## Check if a pull request has been merged
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/merge
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a pull request
 ## Create a pull request
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pulls
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "Amazing new feature",
@@ -25,7 +25,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/comments/{{comment_id}}/replies
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Great stuff!"
@@ -37,7 +37,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "commit_id" : "ecdd80bb57125d7ba9641ffaa4d7d2c19d3f3091",
@@ -56,7 +56,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/comments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Great stuff!",
@@ -73,20 +73,20 @@ Authorization: Bearer={{bearerToken}}
 ## Delete a pending review for a pull request
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews/{{review_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a review comment for a pull request
 ## Delete a review comment for a pull request
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/pulls/comments/{{comment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Dismiss a review for a pull request
 ## Dismiss a review for a pull request
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews/{{review_id}}/dismissals
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "message" : "You are dismissed",
@@ -98,74 +98,74 @@ Authorization: Bearer={{bearerToken}}
 ## Get a pull request
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a review for a pull request
 ## Get a review for a pull request
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews/{{review_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a review comment for a pull request
 ## Get a review comment for a pull request
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/comments/{{comment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List pull requests
 ## List pull requests
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List comments for a pull request review
 ## List comments for a pull request review
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews/{{review_id}}/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List commits on a pull request
 ## List commits on a pull request
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/commits
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List pull requests files
 ## List pull requests files
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/files
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all requested reviewers for a pull request
 ## Get all requested reviewers for a pull request
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/requested_reviewers
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List review comments on a pull request
 ## List review comments on a pull request
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List review comments in a repository
 ## List review comments in a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List reviews for a pull request
 ## List reviews for a pull request
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Merge a pull request
 ## Merge a pull request
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/merge
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "commit_title" : "Expand enum",
@@ -178,7 +178,7 @@ Authorization: Bearer={{bearerToken}}
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/requested_reviewers
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "reviewers" : [ "octocat", "hubot", "other_user" ],
@@ -191,7 +191,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/requested_reviewers
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "reviewers" : [ "octocat", "hubot", "other_user" ],
@@ -204,7 +204,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews/{{review_id}}/events
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Here is the body for the review.",
@@ -217,7 +217,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "new title",
@@ -232,7 +232,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/update-branch
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "expected_head_sha" : "6dcb09b5b57875f334f61aebed695e2e4193db5e"
@@ -244,7 +244,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/pulls/{{pull_number}}/reviews/{{review_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "This is close to perfect! Please address the suggested inline change. And add more about this."
@@ -256,7 +256,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/pulls/comments/{{comment_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "I like this too!"

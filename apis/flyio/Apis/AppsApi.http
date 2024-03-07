@@ -1,0 +1,28 @@
+## AppsApi
+
+### Create App
+## Create App
+POST https://api.machines.dev/v1/apps
+Content-Type: application/json
+Accept: application/json
+
+{
+ "app_name": "<string>",
+ "network": "<string>",
+ "org_slug": "<string>"
+}
+
+
+### Destroy App
+## Destroy App
+DELETE https://api.machines.dev/v1/apps/{{app_name}}
+
+### List Apps
+## List Apps
+GET https://api.machines.dev/v1/apps
+Accept: application/json
+
+### Get App
+## Get App
+GET https://api.machines.dev/v1/apps/{{app_name}}
+Accept: application/json

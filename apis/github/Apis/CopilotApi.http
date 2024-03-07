@@ -5,7 +5,7 @@
 POST https://api.github.com/orgs/{{org}}/copilot/billing/selected_teams
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_teams" : [ "engteam1", "engteam2", "engteam3" ]
@@ -17,7 +17,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/copilot/billing/selected_users
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_usernames" : [ "cooluser1", "hacker2", "octocat" ]
@@ -29,7 +29,7 @@ Authorization: Bearer={{bearerToken}}
 DELETE https://api.github.com/orgs/{{org}}/copilot/billing/selected_teams
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_teams" : [ "engteam1", "engteam2", "engteam3" ]
@@ -41,7 +41,7 @@ Authorization: Bearer={{bearerToken}}
 DELETE https://api.github.com/orgs/{{org}}/copilot/billing/selected_users
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "selected_usernames" : [ "cooluser1", "hacker2", "octocat" ]
@@ -52,16 +52,16 @@ Authorization: Bearer={{bearerToken}}
 ## Get Copilot seat information and settings for an organization
 GET https://api.github.com/orgs/{{org}}/copilot/billing
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get Copilot seat assignment details for a user
 ## Get Copilot seat assignment details for a user
 GET https://api.github.com/orgs/{{org}}/members/{{username}}/copilot
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List all Copilot seat assignments for an organization
 ## List all Copilot seat assignments for an organization
 GET https://api.github.com/orgs/{{org}}/copilot/billing/seats
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}

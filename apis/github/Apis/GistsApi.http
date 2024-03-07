@@ -4,14 +4,14 @@
 ## Check if a gist is starred
 GET https://api.github.com/gists/{{gist_id}}/star
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a gist
 ## Create a gist
 POST https://api.github.com/gists
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "description" : "Example of a gist",
@@ -29,7 +29,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/gists/{{gist_id}}/comments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "This is a comment to a gist"
@@ -40,98 +40,98 @@ Authorization: Bearer={{bearerToken}}
 ## Delete a gist
 DELETE https://api.github.com/gists/{{gist_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a gist comment
 ## Delete a gist comment
 DELETE https://api.github.com/gists/{{gist_id}}/comments/{{comment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Fork a gist
 ## Fork a gist
 POST https://api.github.com/gists/{{gist_id}}/forks
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a gist
 ## Get a gist
 GET https://api.github.com/gists/{{gist_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a gist comment
 ## Get a gist comment
 GET https://api.github.com/gists/{{gist_id}}/comments/{{comment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a gist revision
 ## Get a gist revision
 GET https://api.github.com/gists/{{gist_id}}/{{sha}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List gists for the authenticated user
 ## List gists for the authenticated user
 GET https://api.github.com/gists
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List gist comments
 ## List gist comments
 GET https://api.github.com/gists/{{gist_id}}/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List gist commits
 ## List gist commits
 GET https://api.github.com/gists/{{gist_id}}/commits
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List gists for a user
 ## List gists for a user
 GET https://api.github.com/users/{{username}}/gists
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List gist forks
 ## List gist forks
 GET https://api.github.com/gists/{{gist_id}}/forks
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List public gists
 ## List public gists
 GET https://api.github.com/gists/public
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List starred gists
 ## List starred gists
 GET https://api.github.com/gists/starred
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Star a gist
 ## Star a gist
 PUT https://api.github.com/gists/{{gist_id}}/star
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Unstar a gist
 ## Unstar a gist
 DELETE https://api.github.com/gists/{{gist_id}}/star
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a gist
 ## Update a gist
 PATCH https://api.github.com/gists/{{gist_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "description" : "An updated gist description",
@@ -148,7 +148,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/gists/{{gist_id}}/comments/{{comment_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "This is an update to a comment in a gist"

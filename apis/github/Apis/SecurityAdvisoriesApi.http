@@ -5,14 +5,14 @@
 POST https://api.github.com/repos/{{owner}}/{{repo}}/security-advisories/{{ghsa_id}}/forks
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Privately report a security vulnerability
 ## Privately report a security vulnerability
 POST https://api.github.com/repos/{{owner}}/{{repo}}/security-advisories/reports
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "summary" : "A newly discovered vulnerability",
@@ -36,7 +36,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/security-advisories
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "summary" : "A new important advisory",
@@ -68,46 +68,46 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/security-advisories/{{ghsa_id}}/cve
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a global security advisory
 ## Get a global security advisory
 GET https://api.github.com/advisories/{{ghsa_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository security advisory
 ## Get a repository security advisory
 GET https://api.github.com/repos/{{owner}}/{{repo}}/security-advisories/{{ghsa_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List global security advisories
 ## List global security advisories
 GET https://api.github.com/advisories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository security advisories for an organization
 ## List repository security advisories for an organization
 GET https://api.github.com/orgs/{{org}}/security-advisories
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository security advisories
 ## List repository security advisories
 GET https://api.github.com/repos/{{owner}}/{{repo}}/security-advisories
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a repository security advisory
 ## Update a repository security advisory
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/security-advisories/{{ghsa_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "severity" : "critical",

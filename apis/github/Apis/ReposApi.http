@@ -4,14 +4,14 @@
 ## Accept a repository invitation
 PATCH https://api.github.com/user/repository_invitations/{{invitation_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Add app access restrictions
 ## Add app access restrictions
 POST https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/apps
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "apps" : [ "octoapp" ]
@@ -23,7 +23,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/collaborators/{{username}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "permission" : "triage"
@@ -35,7 +35,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_status_checks/contexts
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "contexts" : [ "continuous-integration/travis-ci", "continuous-integration/jenkins" ]
@@ -47,7 +47,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/teams
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "teams" : [ "justice-league" ]
@@ -59,7 +59,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/users
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "users" : [ "octocat" ]
@@ -70,42 +70,42 @@ Authorization: Bearer={{bearerToken}}
 ## Cancel a GitHub Pages deployment
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pages/deployments/{{pages_deployment_id}}/cancel
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check if automated security fixes are enabled for a repository
 ## Check if automated security fixes are enabled for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/automated-security-fixes
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check if a user is a repository collaborator
 ## Check if a user is a repository collaborator
 GET https://api.github.com/repos/{{owner}}/{{repo}}/collaborators/{{username}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Check if vulnerability alerts are enabled for a repository
 ## Check if vulnerability alerts are enabled for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/vulnerability-alerts
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List CODEOWNERS errors
 ## List CODEOWNERS errors
 GET https://api.github.com/repos/{{owner}}/{{repo}}/codeowners/errors
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Compare two commits
 ## Compare two commits
 GET https://api.github.com/repos/{{owner}}/{{repo}}/compare/{{basehead}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create an autolink reference for a repository
 ## Create an autolink reference for a repository
 POST https://api.github.com/repos/{{owner}}/{{repo}}/autolinks
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "key_prefix" : "TICKET-",
@@ -119,7 +119,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{commit_sha}}/comments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Great stuff",
@@ -133,14 +133,14 @@ Authorization: Bearer={{bearerToken}}
 ## Create commit signature protection
 POST https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_signatures
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Create a commit status
 ## Create a commit status
 POST https://api.github.com/repos/{{owner}}/{{repo}}/statuses/{{sha}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "state" : "success",
@@ -155,7 +155,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/keys
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "title" : "octocat@octomac",
@@ -169,7 +169,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/deployments
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "ref" : "topic-branch",
@@ -183,7 +183,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment-branch-policies
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "release/*"
@@ -195,7 +195,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment_protection_rules
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "integration_id" : 5
@@ -207,7 +207,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/deployments/{{deployment_id}}/statuses
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "environment" : "production",
@@ -222,7 +222,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/dispatches
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "event_type" : "on-demand-test",
@@ -239,7 +239,7 @@ POST https://api.github.com/user/repos
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Hello-World",
@@ -256,7 +256,7 @@ POST https://api.github.com/repos/{{owner}}/{{repo}}/forks
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "organization" : "octocat",
@@ -270,7 +270,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/repos
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Hello-World",
@@ -288,7 +288,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/properties/values
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "properties" : [ {
@@ -309,7 +309,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "wait_timer" : 30,
@@ -333,7 +333,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/contents/{{path}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "message" : "my commit message",
@@ -350,7 +350,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/orgs/{{org}}/rulesets
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "super cool ruleset",
@@ -388,7 +388,7 @@ POST https://api.github.com/repos/{{owner}}/{{repo}}/pages/deployments
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "artifact_url" : "https://downloadcontent/",
@@ -404,7 +404,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pages
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "source" : {
@@ -419,7 +419,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/releases
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "tag_name" : "v1.0.0",
@@ -437,7 +437,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/rulesets
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "super cool ruleset",
@@ -469,7 +469,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/tags/protection
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "pattern" : "v1.*"
@@ -481,7 +481,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{template_owner}}/{{template_repo}}/generate
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "owner" : "octocat",
@@ -497,7 +497,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/hooks
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "web",
@@ -515,76 +515,76 @@ Authorization: Bearer={{bearerToken}}
 ## Decline a repository invitation
 DELETE https://api.github.com/user/repository_invitations/{{invitation_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a repository
 ## Delete a repository
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete access restrictions
 ## Delete access restrictions
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete admin branch protection
 ## Delete admin branch protection
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/enforce_admins
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an environment
 ## Delete an environment
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an autolink reference from a repository
 ## Delete an autolink reference from a repository
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/autolinks/{{autolink_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete branch protection
 ## Delete branch protection
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a commit comment
 ## Delete a commit comment
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/comments/{{comment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete commit signature protection
 ## Delete commit signature protection
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_signatures
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a deploy key
 ## Delete a deploy key
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/keys/{{key_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a deployment
 ## Delete a deployment
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/deployments/{{deployment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a deployment branch policy
 ## Delete a deployment branch policy
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment-branch-policies/{{branch_policy_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a file
 ## Delete a file
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/contents/{{path}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "message" : "my commit message",
@@ -599,109 +599,109 @@ Authorization: Bearer={{bearerToken}}
 ### Delete a repository invitation
 ## Delete a repository invitation
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/invitations/{{invitation_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete an organization repository ruleset
 ## Delete an organization repository ruleset
 DELETE https://api.github.com/orgs/{{org}}/rulesets/{{ruleset_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a GitHub Pages site
 ## Delete a GitHub Pages site
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/pages
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete pull request review protection
 ## Delete pull request review protection
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_pull_request_reviews
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a release
 ## Delete a release
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/releases/{{release_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a release asset
 ## Delete a release asset
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/releases/assets/{{asset_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a repository ruleset
 ## Delete a repository ruleset
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/rulesets/{{ruleset_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a tag protection state for a repository
 ## Delete a tag protection state for a repository
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/tags/protection/{{tag_protection_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete a repository webhook
 ## Delete a repository webhook
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Disable automated security fixes
 ## Disable automated security fixes
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/automated-security-fixes
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Disable a custom protection rule for an environment
 ## Disable a custom protection rule for an environment
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment_protection_rules/{{protection_rule_id}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Disable private vulnerability reporting for a repository
 ## Disable private vulnerability reporting for a repository
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/private-vulnerability-reporting
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Disable vulnerability alerts
 ## Disable vulnerability alerts
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/vulnerability-alerts
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download a repository archive (tar)
 ## Download a repository archive (tar)
 GET https://api.github.com/repos/{{owner}}/{{repo}}/tarball/{{ref}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Download a repository archive (zip)
 ## Download a repository archive (zip)
 GET https://api.github.com/repos/{{owner}}/{{repo}}/zipball/{{ref}}
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Enable automated security fixes
 ## Enable automated security fixes
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/automated-security-fixes
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Enable private vulnerability reporting for a repository
 ## Enable private vulnerability reporting for a repository
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/private-vulnerability-reporting
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Enable vulnerability alerts
 ## Enable vulnerability alerts
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/vulnerability-alerts
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Generate release notes content for a release
 ## Generate release notes content for a release
 POST https://api.github.com/repos/{{owner}}/{{repo}}/releases/generate-notes
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "tag_name" : "v1.0.0",
@@ -715,393 +715,393 @@ Authorization: Bearer={{bearerToken}}
 ## Get a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get access restrictions
 ## Get access restrictions
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get admin branch protection
 ## Get admin branch protection
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/enforce_admins
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all deployment protection rules for an environment
 ## Get all deployment protection rules for an environment
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment_protection_rules
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List environments
 ## List environments
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all status check contexts
 ## Get all status check contexts
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_status_checks/contexts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all repository topics
 ## Get all repository topics
 GET https://api.github.com/repos/{{owner}}/{{repo}}/topics
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get apps with access to the protected branch
 ## Get apps with access to the protected branch
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/apps
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an autolink reference of a repository
 ## Get an autolink reference of a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/autolinks/{{autolink_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a branch
 ## Get a branch
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get branch protection
 ## Get branch protection
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get rules for a branch
 ## Get rules for a branch
 GET https://api.github.com/repos/{{owner}}/{{repo}}/rules/branches/{{branch}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get repository clones
 ## Get repository clones
 GET https://api.github.com/repos/{{owner}}/{{repo}}/traffic/clones
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the weekly commit activity
 ## Get the weekly commit activity
 GET https://api.github.com/repos/{{owner}}/{{repo}}/stats/code_frequency
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get repository permissions for a user
 ## Get repository permissions for a user
 GET https://api.github.com/repos/{{owner}}/{{repo}}/collaborators/{{username}}/permission
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the combined status for a specific reference
 ## Get the combined status for a specific reference
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{ref}}/status
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a commit
 ## Get a commit
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{ref}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the last year of commit activity
 ## Get the last year of commit activity
 GET https://api.github.com/repos/{{owner}}/{{repo}}/stats/commit_activity
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a commit comment
 ## Get a commit comment
 GET https://api.github.com/repos/{{owner}}/{{repo}}/comments/{{comment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get commit signature protection
 ## Get commit signature protection
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_signatures
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get community profile metrics
 ## Get community profile metrics
 GET https://api.github.com/repos/{{owner}}/{{repo}}/community/profile
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get repository content
 ## Get repository content
 GET https://api.github.com/repos/{{owner}}/{{repo}}/contents/{{path}}
 Accept: application/vnd.github.object
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all contributor commit activity
 ## Get all contributor commit activity
 GET https://api.github.com/repos/{{owner}}/{{repo}}/stats/contributors
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a custom deployment protection rule
 ## Get a custom deployment protection rule
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment_protection_rules/{{protection_rule_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all custom property values for a repository
 ## Get all custom property values for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/properties/values
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a deploy key
 ## Get a deploy key
 GET https://api.github.com/repos/{{owner}}/{{repo}}/keys/{{key_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a deployment
 ## Get a deployment
 GET https://api.github.com/repos/{{owner}}/{{repo}}/deployments/{{deployment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a deployment branch policy
 ## Get a deployment branch policy
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment-branch-policies/{{branch_policy_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a deployment status
 ## Get a deployment status
 GET https://api.github.com/repos/{{owner}}/{{repo}}/deployments/{{deployment_id}}/statuses/{{status_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an environment
 ## Get an environment
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get latest Pages build
 ## Get latest Pages build
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pages/builds/latest
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the latest release
 ## Get the latest release
 GET https://api.github.com/repos/{{owner}}/{{repo}}/releases/latest
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization rule suite
 ## Get an organization rule suite
 GET https://api.github.com/orgs/{{org}}/rulesets/rule-suites/{{rule_suite_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization rule suites
 ## List organization rule suites
 GET https://api.github.com/orgs/{{org}}/rulesets/rule-suites
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get an organization repository ruleset
 ## Get an organization repository ruleset
 GET https://api.github.com/orgs/{{org}}/rulesets/{{ruleset_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all organization repository rulesets
 ## Get all organization repository rulesets
 GET https://api.github.com/orgs/{{org}}/rulesets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a GitHub Pages site
 ## Get a GitHub Pages site
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pages
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get GitHub Pages build
 ## Get GitHub Pages build
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pages/builds/{{build_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the status of a GitHub Pages deployment
 ## Get the status of a GitHub Pages deployment
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pages/deployments/{{pages_deployment_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a DNS health check for GitHub Pages
 ## Get a DNS health check for GitHub Pages
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pages/health
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the weekly commit count
 ## Get the weekly commit count
 GET https://api.github.com/repos/{{owner}}/{{repo}}/stats/participation
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get pull request review protection
 ## Get pull request review protection
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_pull_request_reviews
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get the hourly commit count for each day
 ## Get the hourly commit count for each day
 GET https://api.github.com/repos/{{owner}}/{{repo}}/stats/punch_card
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository README
 ## Get a repository README
 GET https://api.github.com/repos/{{owner}}/{{repo}}/readme
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository README for a directory
 ## Get a repository README for a directory
 GET https://api.github.com/repos/{{owner}}/{{repo}}/readme/{{dir}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a release
 ## Get a release
 GET https://api.github.com/repos/{{owner}}/{{repo}}/releases/{{release_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a release asset
 ## Get a release asset
 GET https://api.github.com/repos/{{owner}}/{{repo}}/releases/assets/{{asset_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a release by tag name
 ## Get a release by tag name
 GET https://api.github.com/repos/{{owner}}/{{repo}}/releases/tags/{{tag}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository rule suite
 ## Get a repository rule suite
 GET https://api.github.com/repos/{{owner}}/{{repo}}/rulesets/rule-suites/{{rule_suite_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository rule suites
 ## List repository rule suites
 GET https://api.github.com/repos/{{owner}}/{{repo}}/rulesets/rule-suites
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository ruleset
 ## Get a repository ruleset
 GET https://api.github.com/repos/{{owner}}/{{repo}}/rulesets/{{ruleset_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all repository rulesets
 ## Get all repository rulesets
 GET https://api.github.com/repos/{{owner}}/{{repo}}/rulesets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get status checks protection
 ## Get status checks protection
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_status_checks
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get teams with access to the protected branch
 ## Get teams with access to the protected branch
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get top referral paths
 ## Get top referral paths
 GET https://api.github.com/repos/{{owner}}/{{repo}}/traffic/popular/paths
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get top referral sources
 ## Get top referral sources
 GET https://api.github.com/repos/{{owner}}/{{repo}}/traffic/popular/referrers
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get users with access to the protected branch
 ## Get users with access to the protected branch
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/users
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get page views
 ## Get page views
 GET https://api.github.com/repos/{{owner}}/{{repo}}/traffic/views
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a repository webhook
 ## Get a repository webhook
 GET https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a webhook configuration for a repository
 ## Get a webhook configuration for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}/config
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a delivery for a repository webhook
 ## Get a delivery for a repository webhook
 GET https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}/deliveries/{{delivery_id}}
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository activities
 ## List repository activities
 GET https://api.github.com/repos/{{owner}}/{{repo}}/activity
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get all autolinks of a repository
 ## Get all autolinks of a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/autolinks
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List branches
 ## List branches
 GET https://api.github.com/repos/{{owner}}/{{repo}}/branches
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List branches for HEAD commit
 ## List branches for HEAD commit
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{commit_sha}}/branches-where-head
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository collaborators
 ## List repository collaborators
@@ -1119,167 +1119,167 @@ Authorization: Bearer {{bearerToken}}
 ## List commit comments for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/comments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List commit statuses for a reference
 ## List commit statuses for a reference
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{ref}}/statuses
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List commits
 ## List commits
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository contributors
 ## List repository contributors
 GET https://api.github.com/repos/{{owner}}/{{repo}}/contributors
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List custom deployment rule integrations available for an environment
 ## List custom deployment rule integrations available for an environment
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment_protection_rules/apps
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List deploy keys
 ## List deploy keys
 GET https://api.github.com/repos/{{owner}}/{{repo}}/keys
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List deployment branch policies
 ## List deployment branch policies
 GET https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment-branch-policies
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List deployment statuses
 ## List deployment statuses
 GET https://api.github.com/repos/{{owner}}/{{repo}}/deployments/{{deployment_id}}/statuses
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List deployments
 ## List deployments
 GET https://api.github.com/repos/{{owner}}/{{repo}}/deployments
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories for the authenticated user
 ## List repositories for the authenticated user
 GET https://api.github.com/user/repos
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List organization repositories
 ## List organization repositories
 GET https://api.github.com/orgs/{{org}}/repos
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repositories for a user
 ## List repositories for a user
 GET https://api.github.com/users/{{username}}/repos
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List forks
 ## List forks
 GET https://api.github.com/repos/{{owner}}/{{repo}}/forks
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository invitations
 ## List repository invitations
 GET https://api.github.com/repos/{{owner}}/{{repo}}/invitations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository invitations for the authenticated user
 ## List repository invitations for the authenticated user
 GET https://api.github.com/user/repository_invitations
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository languages
 ## List repository languages
 GET https://api.github.com/repos/{{owner}}/{{repo}}/languages
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List GitHub Pages builds
 ## List GitHub Pages builds
 GET https://api.github.com/repos/{{owner}}/{{repo}}/pages/builds
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List public repositories
 ## List public repositories
 GET https://api.github.com/repositories
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List pull requests associated with a commit
 ## List pull requests associated with a commit
 GET https://api.github.com/repos/{{owner}}/{{repo}}/commits/{{commit_sha}}/pulls
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List release assets
 ## List release assets
 GET https://api.github.com/repos/{{owner}}/{{repo}}/releases/{{release_id}}/assets
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List releases
 ## List releases
 GET https://api.github.com/repos/{{owner}}/{{repo}}/releases
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List tag protection states for a repository
 ## List tag protection states for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/tags/protection
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository tags
 ## List repository tags
 GET https://api.github.com/repos/{{owner}}/{{repo}}/tags
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository teams
 ## List repository teams
 GET https://api.github.com/repos/{{owner}}/{{repo}}/teams
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List deliveries for a repository webhook
 ## List deliveries for a repository webhook
 GET https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}/deliveries
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List repository webhooks
 ## List repository webhooks
 GET https://api.github.com/repos/{{owner}}/{{repo}}/hooks
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Merge a branch
 ## Merge a branch
 POST https://api.github.com/repos/{{owner}}/{{repo}}/merges
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "base" : "master",
@@ -1293,7 +1293,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/merge-upstream
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "branch" : "main"
@@ -1304,21 +1304,21 @@ Authorization: Bearer={{bearerToken}}
 ## Ping a repository webhook
 POST https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}/pings
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Redeliver a delivery for a repository webhook
 ## Redeliver a delivery for a repository webhook
 POST https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}/deliveries/{{delivery_id}}/attempts
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove app access restrictions
 ## Remove app access restrictions
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/apps
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "apps" : [ "my-app" ]
@@ -1329,14 +1329,14 @@ Authorization: Bearer={{bearerToken}}
 ## Remove a repository collaborator
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/collaborators/{{username}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove status check contexts
 ## Remove status check contexts
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_status_checks/contexts
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "contexts" : [ "continuous-integration/jenkins" ]
@@ -1346,14 +1346,14 @@ Authorization: Bearer={{bearerToken}}
 ### Remove status check protection
 ## Remove status check protection
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_status_checks
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Remove team access restrictions
 ## Remove team access restrictions
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/teams
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "teams" : [ "octocats" ]
@@ -1365,7 +1365,7 @@ Authorization: Bearer={{bearerToken}}
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/users
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "users" : [ "octocat" ]
@@ -1377,7 +1377,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/rename
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "new_name" : "my_renamed_branch"
@@ -1389,7 +1389,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/topics
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "names" : [ "octocat", "atom", "electron", "api" ]
@@ -1400,20 +1400,20 @@ Authorization: Bearer={{bearerToken}}
 ## Request a GitHub Pages build
 POST https://api.github.com/repos/{{owner}}/{{repo}}/pages/builds
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Set admin branch protection
 ## Set admin branch protection
 POST https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/enforce_admins
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Set app access restrictions
 ## Set app access restrictions
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/apps
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "apps" : [ "octoapp" ]
@@ -1425,7 +1425,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_status_checks/contexts
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "contexts" : [ "continuous-integration/travis-ci" ]
@@ -1437,7 +1437,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/teams
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "teams" : [ "justice-league" ]
@@ -1449,7 +1449,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/restrictions/users
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "users" : [ "octocat" ]
@@ -1460,14 +1460,14 @@ Authorization: Bearer={{bearerToken}}
 ## Test the push repository webhook
 POST https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}/tests
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Transfer a repository
 ## Transfer a repository
 POST https://api.github.com/repos/{{owner}}/{{repo}}/transfer
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "new_owner" : "github",
@@ -1481,7 +1481,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "Hello-World",
@@ -1499,7 +1499,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "required_status_checks" : {
@@ -1541,7 +1541,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/comments/{{comment_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "body" : "Nice change"
@@ -1553,7 +1553,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/environments/{{environment_name}}/deployment-branch-policies/{{branch_policy_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "release/*"
@@ -1566,7 +1566,7 @@ PUT https://api.github.com/repos/{{owner}}/{{repo}}/pages
 Content-Type: application/json
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "cname" : "octocatblog.com",
@@ -1582,7 +1582,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/invitations/{{invitation_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "permissions" : "write"
@@ -1594,7 +1594,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/orgs/{{org}}/rulesets/{{ruleset_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "super cool ruleset",
@@ -1631,7 +1631,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_pull_request_reviews
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "dismissal_restrictions" : {
@@ -1656,7 +1656,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/releases/{{release_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "tag_name" : "v1.0.0",
@@ -1673,7 +1673,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/releases/assets/{{asset_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "foo-1.0.0-osx.zip",
@@ -1686,7 +1686,7 @@ Authorization: Bearer={{bearerToken}}
 PUT https://api.github.com/repos/{{owner}}/{{repo}}/rulesets/{{ruleset_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "name" : "super cool ruleset",
@@ -1718,7 +1718,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/branches/{{branch}}/protection/required_status_checks
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "strict" : true,
@@ -1731,7 +1731,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "active" : true,
@@ -1744,7 +1744,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/hooks/{{hook_id}}/config
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "content_type" : "json",
@@ -1757,7 +1757,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/releases/{{release_id}}/assets
 Content-Type: application/octet-stream
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 
 

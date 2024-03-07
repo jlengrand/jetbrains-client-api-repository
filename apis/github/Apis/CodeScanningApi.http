@@ -5,75 +5,75 @@
 DELETE https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/analyses/{{analysis_id}}
 Accept: application/json
 Accept: application/scim+json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a code scanning alert
 ## Get a code scanning alert
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/alerts/{{alert_number}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a code scanning analysis for a repository
 ## Get a code scanning analysis for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/analyses/{{analysis_id}}
 Accept: application/json
 Accept: application/json+sarif
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a CodeQL database for a repository
 ## Get a CodeQL database for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/codeql/databases/{{language}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get a code scanning default setup configuration
 ## Get a code scanning default setup configuration
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/default-setup
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Get information about a SARIF upload
 ## Get information about a SARIF upload
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/sarifs/{{sarif_id}}
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List instances of a code scanning alert
 ## List instances of a code scanning alert
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/alerts/{{alert_number}}/instances
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List code scanning alerts for an organization
 ## List code scanning alerts for an organization
 GET https://api.github.com/orgs/{{org}}/code-scanning/alerts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List code scanning alerts for a repository
 ## List code scanning alerts for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/alerts
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List CodeQL databases for a repository
 ## List CodeQL databases for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/codeql/databases
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### List code scanning analyses for a repository
 ## List code scanning analyses for a repository
 GET https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/analyses
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 ### Update a code scanning alert
 ## Update a code scanning alert
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/alerts/{{alert_number}}
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "state" : "dismissed",
@@ -87,7 +87,7 @@ Authorization: Bearer={{bearerToken}}
 PATCH https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/default-setup
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "state" : "configured"
@@ -99,7 +99,7 @@ Authorization: Bearer={{bearerToken}}
 POST https://api.github.com/repos/{{owner}}/{{repo}}/code-scanning/sarifs
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer={{bearerToken}}
+Authorization: Bearer {{bearerToken}}
 
 {
   "commit_sha" : "4b6472266afd7b471e86085a6659e8c7f2b119da",
