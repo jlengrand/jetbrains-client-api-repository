@@ -1,0 +1,51 @@
+## V1Api
+
+### Get cities
+## Get cities
+GET https://api.openaq.org/v1/cities
+Accept: application/json
+
+### Get country by ID
+## Get country by ID
+GET https://api.openaq.org/v1/countries/{{country_id}}
+Accept: application/json
+
+### Get countries
+## Get countries
+GET https://api.openaq.org/v1/countries
+Accept: application/json
+
+### Get latest measurements
+## Get latest measurements
+GET https://api.openaq.org/v1/latest
+Accept: application/json
+
+### Get latest measurements by location ID
+## Get latest measurements by location ID
+GET https://api.openaq.org/v1/latest/{{location_id}}
+Accept: application/json
+
+### Get locations
+## Get locations
+GET https://api.openaq.org/v1/locations
+Accept: application/json
+
+### Get location by ID
+## Get location by ID
+GET https://api.openaq.org/v1/locations/{{location_id}}
+Accept: application/json
+
+### Get a list of measurements
+## Get a list of measurements
+GET https://api.openaq.org/v1/measurements
+Accept: application/json
+
+### Get parameters
+## Get parameters
+GET https://api.openaq.org/v1/parameters
+Accept: application/json
+
+### Sources
+## Sources
+GET https://api.openaq.org/v1/sources
+Accept: application/json

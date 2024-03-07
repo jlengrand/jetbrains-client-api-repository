@@ -1,0 +1,87 @@
+## V2Api
+
+### Get averaged values
+## Get averaged values
+GET https://api.openaq.org/v2/averages
+Accept: application/json
+
+### Get cities
+## Get cities
+GET https://api.openaq.org/v2/cities
+Accept: application/json
+
+### Get country by ID
+## Get country by ID
+GET https://api.openaq.org/v2/countries/{{country_id}}
+Accept: application/json
+
+### Get countries
+## Get countries
+GET https://api.openaq.org/v2/countries
+Accept: application/json
+
+### Get latest measurements
+## Get latest measurements
+GET https://api.openaq.org/v2/latest
+Accept: application/json
+
+### Get latest measurements by location ID
+## Get latest measurements by location ID
+GET https://api.openaq.org/v2/latest/{{location_id}}
+Accept: application/json
+
+### Get locations
+## Get locations
+GET https://api.openaq.org/v2/locations
+Accept: application/json
+
+### Get a location by ID
+## Get a location by ID
+GET https://api.openaq.org/v2/locations/{{location_id}}
+Accept: application/json
+
+### Get measurements
+## Get measurements
+GET https://api.openaq.org/v2/measurements
+Accept: application/json
+
+### Get manufacturers
+## Get manufacturers
+GET https://api.openaq.org/v2/manufacturers
+Accept: application/json
+
+### Get models
+## Get models
+GET https://api.openaq.org/v2/models
+Accept: application/json
+
+### Get parameters
+## Get parameters
+GET https://api.openaq.org/v2/parameters
+Accept: application/json
+
+### Projects
+## Projects
+GET https://api.openaq.org/v2/projects
+Accept: application/json
+
+### Project by ID
+## Project by ID
+GET https://api.openaq.org/v2/projects/{{project_id}}
+Accept: application/json
+
+### Source Readme
+## Source Readme
+GET https://api.openaq.org/v2/sources/readme/{{slug}}
+Accept: text/html
+Accept: application/json
+
+### Sources
+## Sources
+GET https://api.openaq.org/v2/sources
+Accept: application/json
+
+### Platform Summary
+## Platform Summary
+GET https://api.openaq.org/v2/summary
+Accept: application/json
