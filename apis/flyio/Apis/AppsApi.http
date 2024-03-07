@@ -5,6 +5,7 @@
 POST https://api.machines.dev/v1/apps
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "app_name": "<string>",
@@ -16,13 +17,16 @@ Accept: application/json
 ### Destroy App
 ## Destroy App
 DELETE https://api.machines.dev/v1/apps/{{app_name}}
+Authorization: Bearer {{bearerToken}}
 
 ### List Apps
 ## List Apps
 GET https://api.machines.dev/v1/apps
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Get App
 ## Get App
 GET https://api.machines.dev/v1/apps/{{app_name}}
 Accept: application/json
+Authorization: Bearer {{bearerToken}}

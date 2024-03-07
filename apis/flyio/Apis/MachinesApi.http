@@ -3,12 +3,14 @@
 ### Cordon Machine
 ## Cordon Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/cordon
+Authorization: Bearer {{bearerToken}}
 
 ### Create Machine
 ## Create Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "config": "<string>",
@@ -26,6 +28,7 @@ Accept: application/json
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/lease
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "description": "<string>",
@@ -36,10 +39,12 @@ Accept: application/json
 ### Destroy Machine
 ## Destroy Machine
 DELETE https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}
+Authorization: Bearer {{bearerToken}}
 
 ### Delete Metadata
 ## Delete Metadata
 DELETE https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/metadata/{{key}}
+Authorization: Bearer {{bearerToken}}
 
 ### Execute Command
 ## Execute Command
@@ -47,6 +52,7 @@ POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/exec
 Content-Type: application/json
 Accept: application/octet-stream
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "cmd": "<string>",
@@ -59,51 +65,61 @@ Accept: application/json
 ## List Machines
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### List Events
 ## List Events
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/events
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### List Processes
 ## List Processes
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/ps
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### List Versions
 ## List Versions
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/versions
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Release Lease
 ## Release Lease
 DELETE https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/lease
+Authorization: Bearer {{bearerToken}}
 
 ### Restart Machine
 ## Restart Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/restart
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Get Machine
 ## Get Machine
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Get Lease
 ## Get Lease
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/lease
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Get Metadata
 ## Get Metadata
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/metadata
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Signal Machine
 ## Signal Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/signal
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "signal": "<string>"
@@ -113,12 +129,14 @@ Accept: application/json
 ### Start Machine
 ## Start Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/start
+Authorization: Bearer {{bearerToken}}
 
 ### Stop Machine
 ## Stop Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/stop
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "signal": "<string>",
@@ -129,12 +147,14 @@ Accept: application/json
 ### Uncordon Machine
 ## Uncordon Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/uncordon
+Authorization: Bearer {{bearerToken}}
 
 ### Update Machine
 ## Update Machine
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "config": "<string>",
@@ -152,8 +172,10 @@ Accept: application/json
 ## Update Metadata
 POST https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/metadata/{{key}}
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Wait for State
 ## Wait for State
 GET https://api.machines.dev/v1/apps/{{app_name}}/machines/{{machine_id}}/wait
 Accept: application/json
+Authorization: Bearer {{bearerToken}}

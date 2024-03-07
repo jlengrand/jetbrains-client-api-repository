@@ -3,17 +3,20 @@
 ### Create Snapshot
 ## Create Snapshot
 POST https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}/snapshots
+Authorization: Bearer {{bearerToken}}
 
 ### Destroy Volume
 ## Destroy Volume
 DELETE https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Create Volume
 ## Create Volume
 POST https://api.machines.dev/v1/apps/{{app_name}}/volumes
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "compute": "<string>",
@@ -35,6 +38,7 @@ Accept: application/json
 PUT https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}/extend
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "size_gb": "<number>"
@@ -45,22 +49,26 @@ Accept: application/json
 ## Get Volume
 GET https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### List Volumes
 ## List Volumes
 GET https://api.machines.dev/v1/apps/{{app_name}}/volumes
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### List Snapshots
 ## List Snapshots
 GET https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}/snapshots
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 ### Update Volume
 ## Update Volume
 POST https://api.machines.dev/v1/apps/{{app_name}}/volumes/{{volume_id}}
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer {{bearerToken}}
 
 {
  "auto_backup_enabled": "<string>",
